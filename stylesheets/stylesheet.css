@@ -34,6 +34,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
+.clearfix:after {content: ".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
 
 ol, ul {
   list-style: none;
@@ -264,7 +265,7 @@ Full-Width Styles
 
 .inner {
   position: relative;
-  max-width: 640px;
+  max-width: 960px;
   padding: 20px 10px;
   margin: 0 auto;
 }
@@ -423,6 +424,14 @@ Small Device Styles
 }
 
 /* this by myself */
-
+.item .avata , .item .about , .image_list li{float:left;}
+.border_outside{border:1px solid #C7C7C7;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);border-radius:3px}
+.item .avata{margin-right:14px;}
+.item .desc{color:#777;}
+.image_list ul{padding:0;}
+.image_list li{width:204px;list-style:none;margin-right:34px;}
+.image_list li img{width:100%;}
+.load_more{width:120px;height:30px;line-height:30px;border:1px solid #AAA;display:block;text-align: center;margin:0 auto;color:#666;}
+.load_more:hover{color:#444;text-decoration: none}
 
 

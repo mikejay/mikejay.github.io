@@ -429,7 +429,7 @@ Small Device Styles
 .item .avata{margin-right:14px;}
 .item .desc{color:#777;}
 .image_list ul{padding:0;}
-.image_list li{width:204px;list-style:none;margin-right:34px;}
+.image_list li{width:204px;height:204px;margin-bottom:34px;list-style:none;margin-right:34px;}
 .image_list li img{width:100%;}
 .load_more{width:120px;height:30px;line-height:30px;border:1px solid #AAA;display:block;text-align: center;margin:0 auto;color:#666;}
 .load_more:hover{color:#444;text-decoration: none}

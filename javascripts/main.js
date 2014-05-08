@@ -82,7 +82,7 @@
 				newImg = this.parent().clone() ,
 				cover = $('.body_cover') ;
 
-				newImg.addClass('big_pic').css({ 'left' : left , 'top' : top }).removeClass('blur');
+				newImg.addClass('big_pic').css({ 'left' : left , 'top' : top });
 				$('<span class="close"><img src="'+window.location+'/images/close.png"></span>').appendTo(newImg);
 				newImg.appendTo('body');
 				cover.show();
@@ -127,19 +127,7 @@
 		$('.body_cover , .big_pic .close').live('click' , function(){
 			imgOperation.hideBigImg.call( $('.big_pic') , $('.body_cover'));
 		});
-
-
-		$(".image_list li img").live({
-		   mouseenter:function(){
-		   	$(this).addClass('blur');
-		   },
-		   mouseleave:function(){
-		   	if($(this).hasClass('blur')){
-		   		$(this).removeClass('blur');
-		   	}
-		   }
-		});
-
+		
 		$(window).resize(function(){
 			if( $('.big_pic').length > 0 ){
 				imgOperation.resetPos.call( $('.big_pic') );

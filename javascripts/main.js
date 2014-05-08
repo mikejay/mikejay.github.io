@@ -23,7 +23,7 @@
 					//$('.image_list ul').html(htmlStr.join(' '));
 				}
 		} , 
-		getRecntData : function(){
+		getRecentData : function(){
 			var options = {
 				url : 'https://api.instagram.com/v1/users/'+ins.userId+'/media/recent/?access_token=' + this.token ,
 				type : 'get' , 
@@ -113,8 +113,8 @@
 
 	$(function(){
 		//ins.getUser();
-		ins.getRecntData();
-		
+		ins.getRecentData();
+
 		$('.life .load_more').click(function(){
 			$(this).text('加载中...');
 			ins.getNext();

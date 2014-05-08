@@ -114,7 +114,7 @@
 	$(function(){
 		//ins.getUser();
 		ins.getRecntData();
-
+		
 		$('.life .load_more').click(function(){
 			$(this).text('加载中...');
 			ins.getNext();
@@ -127,7 +127,7 @@
 		$('.body_cover , .big_pic .close').live('click' , function(){
 			imgOperation.hideBigImg.call( $('.big_pic') , $('.body_cover'));
 		});
-		
+
 		$(window).resize(function(){
 			if( $('.big_pic').length > 0 ){
 				imgOperation.resetPos.call( $('.big_pic') );

@@ -97,6 +97,17 @@
 		hideBigImg : function(cover){
 			this.remove();
 			cover.hide();
+		} ,
+		resetPos : function(){
+			var	tmpl = ($(window).width() - 640)/2 , 
+				tmpt = ($(window).height() - 640)/2 ,
+				l = tmpl > 0 ? tmpl : 0 , 
+				t = tmpt > 0 ? tmpt : 0 ;
+
+				this.animate({
+					top : t ,
+					left : l
+				} , 0);
 		}
 	}
 
@@ -114,8 +125,13 @@
 		});
 
 		$('.body_cover , .big_pic .close').live('click' , function(){
-
 			imgOperation.hideBigImg.call( $('.big_pic') , $('.body_cover'));
+		});
+
+		$(window).resize(function(){
+			if( $('.big_pic').length > 0 ){
+				imgOperation.resetPos.call( $('.big_pic') );
+			}
 		});
 
 	});

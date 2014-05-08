@@ -82,7 +82,7 @@
 				newImg = this.parent().clone() ,
 				cover = $('.body_cover') ;
 
-				newImg.addClass('big_pic').css({ 'left' : left , 'top' : top });
+				newImg.addClass('big_pic').css({ 'left' : left , 'top' : top }).removeClass('blur');
 				$('<span class="close"><img src="'+window.location+'/images/close.png"></span>').appendTo(newImg);
 				newImg.appendTo('body');
 				cover.show();

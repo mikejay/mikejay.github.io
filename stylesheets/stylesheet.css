@@ -428,7 +428,7 @@ Small Device Styles
 .item .avata , .item .about , .image_list li{float:left;}
 .border_outside{border:1px solid #C7C7C7;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);border-radius:3px}
 .item .avata{margin-right:14px;}
-.item .desc{color:#777;}
+.item .desc{color:#777;margin-top:0;margin-bottom:3px;}
 .image_list ul{padding:0;}
 .image_list li , .big_pic{width:204px;height:204px}
 .image_list li{margin-bottom:34px;list-style:none;margin-right:34px;}

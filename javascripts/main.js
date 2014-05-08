@@ -128,6 +128,18 @@
 			imgOperation.hideBigImg.call( $('.big_pic') , $('.body_cover'));
 		});
 
+
+		$(".image_list li img").live({
+		   mouseenter:function(){
+		   	$(this).addClass('blur');
+		   },
+		   mouseleave:function(){
+		   	if($(this).hasClass('blur')){
+		   		$(this).removeClass('blur');
+		   	}
+		   }
+		});
+
 		$(window).resize(function(){
 			if( $('.big_pic').length > 0 ){
 				imgOperation.resetPos.call( $('.big_pic') );

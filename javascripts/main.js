@@ -114,10 +114,9 @@
 	var weather = {
 		location : function(){
 			//百度api 通过经纬度获取天气出问题，暂时使用这个
-			weather.getWeather();
-
+			//weather.getWeather();
 			if(navigator.geolocation){
-			//	navigator.geolocation.getCurrentPosition( weather.current );
+				navigator.geolocation.getCurrentPosition( weather.current );
 			}else{
 				//console.log('f')
 			}	
@@ -127,9 +126,7 @@
 			var coords = pos.coords ,
 				lat = coords.latitude ,
 				lng = coords.longitude ,
-				location = lat +',' + lng ,
-				appkey = 'E4805d16520de693a3fe707cdc962045' , 
-				url = 'http://api.map.baidu.com/telematics/v3/weather?location='+location+'&output=json&ak='+appkey;
+				url = 'http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lng
 
 				var options = {
 					url : url , 
@@ -142,20 +139,23 @@
 				}
 				$.ajax( options );
 		} , 
-		getWeather : function(){
+		/*getWeather : function(){
 			$.get("http://ipinfo.io", function( res ) {
-				console.log(res.city)
+				//console.log(res)
+				var city = res.city , 
+					country = res.country ;
+
 				var appkey = 'E4805d16520de693a3fe707cdc962045' ,
 					location = res.city ,
 					url = 'http://api.map.baidu.com/telematics/v3/weather?location='+location+'&output=json&ak='+appkey;
-					url = 'http://api.map.baidu.com/telematics/v3/weather?location=%E5%8C%97%E4%BA%AC&output=json&ak=E4805d16520de693a3fe707cdc962045' ;
+					url = 'http://api.openweathermap.org/data/2.5/weather?q='+city+','+country ;
 
 				$.get(url , function(res){
 					console.log(res);
 				} , "jsonp");
 
 			}, "jsonp");
-		}
+		}*/
 
 	};
 

@@ -109,11 +109,60 @@
 					left : l
 				} , 0);
 		}
-	}
+	};
+
+	var weather = {
+		location : function(){
+			//百度api 通过经纬度获取天气出问题，暂时使用这个
+			weather.getWeather();
+
+			if(navigator.geolocation){
+			//	navigator.geolocation.getCurrentPosition( weather.current );
+			}else{
+				//console.log('f')
+			}	
+			
+		}  ,
+		current : function( pos ){
+			var coords = pos.coords ,
+				lat = coords.latitude ,
+				lng = coords.longitude ,
+				location = lat +',' + lng ,
+				appkey = 'E4805d16520de693a3fe707cdc962045' , 
+				url = 'http://api.map.baidu.com/telematics/v3/weather?location='+location+'&output=json&ak='+appkey;
+
+				var options = {
+					url : url , 
+					type : 'get' ,
+					dataType : 'jsonp' , 
+					data : {} , 
+					success : function(d){
+						console.log(d)
+					} , 
+				}
+				$.ajax( options );
+		} , 
+		getWeather : function(){
+			$.get("http://ipinfo.io", function( res ) {
+				console.log(res.city)
+				var appkey = 'E4805d16520de693a3fe707cdc962045' ,
+					location = res.city ,
+					url = 'http://api.map.baidu.com/telematics/v3/weather?location='+location+'&output=json&ak='+appkey;
+					url = 'http://api.map.baidu.com/telematics/v3/weather?location=%E5%8C%97%E4%BA%AC&output=json&ak=E4805d16520de693a3fe707cdc962045' ;
+
+				$.get(url , function(res){
+					console.log(res);
+				} , "jsonp");
+
+			}, "jsonp");
+		}
+
+	};
 
 	$(function(){
 		//ins.getUser();
 		ins.getRecentData();
+		weather.location();
 
 		$('.life .load_more').click(function(){
 			$(this).text('加载中...');

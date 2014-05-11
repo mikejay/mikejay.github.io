@@ -295,7 +295,7 @@ Full-Width Styles
 }
 
 #header_wrap .inner {
-  padding: 80px 10px 30px 10px;
+  padding: 80px 10px 40px 10px;
 }
 
 #project_title {
@@ -428,6 +428,7 @@ Small Device Styles
 #header_wrap img{width:100%;border:none;position: absolute;top:0;left:0;padding:0;margin:0;max-width:100%;z-index: 0}
 #header_wrap .inner{position: relative;z-index: 1}
 #main_content_wrap{border-top: none}
+#main_content{padding-top:30px}
 .blur{-webkit-filter:blur(1px);-moz-filter:blur(1px);-o-filter:blur(1px);-ms-filter:blur(1px);}
 .item .avata , .item .about , .image_list li{float:left;}
 .border_outside{border:1px solid #C7C7C7;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);border-radius:3px}

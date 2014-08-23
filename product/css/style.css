@@ -10,13 +10,21 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 #wrapper{margin:0 auto;overflow-x:hidden;width: 100%;height: 100%;}
 #wrapper img{width: 100%}
 .tab{width: 90%;margin:10px auto;height: 30px;border: 1px solid #0c7ff2;border-radius: 5px}
-.tab li{float: left;width: 50%;height:100%;line-height: 30px;text-align: center;color:#0c7ff2;font-size: 1.6em}
-.tab li a{color: #0c7ff2}
-.tab li.action{background-color:#0c7ff2;}
-.tab li.action a{color: #fff}
+.tab li{float: left;width: 50%;height:100%;line-height: 30px;text-align: center;color:#0c7ff2;font-size: 1.6em;color: #0c7ff2}
+.tab li.action{background-color:#0c7ff2;color: #fff}
+.bigButton{width: 100%;height: 50px;color:#fff;font-size:1.8em;line-height: 50px;text-align: center;color: #fff}
+.bigButton a{color: #fff}
+.enable{background-color: #0c7ff2;}
+.disable{background:#999999;}
+.tablist{display: none}
+.show{display: block;}
+.hide{display: none}
+.whiteBg{background:#fff;}
+.borderBottom{border-bottom: 1px solid #d9d9d9;}
 
+
+/*partner*/
 .intro{color: #333333}
-
 .main .cover{width: 100%;background-size:100% auto;background-position: center center}
 .partner .cover{height:145px;background-image:url(../images/partner_bg.jpg);padding-top:25px;}
 .cover .avatar , .cover .avatar img{width:8.4em;height:8.4em;border-radius: 8.4em;}
@@ -30,7 +38,7 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 .partner .module p:last-child{border:none;}
 .partner .module .textarea{padding-bottom: 30px}
 .partner .album , .partner .intro{background-color: #fff}
-
+/*driver*/
 .driver .cover{height:195px;background-image:url(../images/driver_bg.jpg);padding-top:20px;}
 .driver .userInfo span{background-image:url(../images/authentication.png);background-repeat: no-repeat;background-size: 10px auto;padding-left: 20px;background-position: 0 center;}
 .driver .about{width: 100%;height:55px;background: rgba(0 , 0 , 0 ,.15);margin-top: 20px}
@@ -40,7 +48,9 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 .driver .about li i{width: 1px;height: 20px;display: block;position: absolute;right:0;top: 17px;border: none;background: #fff}
 .driver .lines{background: #fff;width:100%;border: 1px solid #d9d9d9;border-left: none;border-right: none;margin-bottom:15px }
 .driver .lines .inner{width: 90%;margin: 0 auto}
-.driver .lines h4 , .driver .lines .aboutLine{border-bottom: 1px solid #d9d9d9;padding: 15px 0;}
+.driver .lines h4 , .driver .lines .aboutLine , .driver .profile p{padding: 15px 0;border-bottom: 1px solid #d9d9d9;}
 .driver .lines h4{font-size: 1.7em;line-height: 20px}
-.driver .lines .aboutLine , .driver .lines .remark{font-size: 1.5em;line-height: 20px}
+.driver .lines .aboutLine , .driver .lines .remark{font-size: 1.5em;line-height: 20px;}
 .driver .lines .remark{padding:15px 0 20px;}
+.driver .profile{border-top: 1px solid #d9d9d9;margin-bottom: 15px}
+.driver .profile p{font-size: 1.6em;width: 90%;padding-left:5%;padding-right:5%;line-height: 21px;border-bottom: 1px solid #d9d9d9 }

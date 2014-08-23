@@ -1,6 +1,6 @@
 *{padding:0;margin:0;list-style:none;}
 html{font-size:62.5%;}
-body{background:#f5f5f5;font-family:"HelveticaNeueLTPro-Md", "Helvetica Neue", Helvetica, Arial, Sans-Serif;}
+body{background:#f5f5f5;font-family:"HelveticaNeueLTPro-Md", "Helvetica Neue", Helvetica, Arial, Sans-Serif;color: #333333}
 a{text-decoration:none;cursor:pointer;}
 a img{border:none;}
 em{font-style: normal;}
@@ -12,8 +12,10 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 .tab{width: 90%;margin:10px auto;height: 30px;border: 1px solid #0c7ff2;border-radius: 5px}
 .tab li{float: left;width: 50%;height:100%;line-height: 30px;text-align: center;color:#0c7ff2;font-size: 1.6em;color: #0c7ff2}
 .tab li.action{background-color:#0c7ff2;color: #fff}
-.bigButton{width: 100%;height: 50px;color:#fff;font-size:1.8em;line-height: 50px;text-align: center;color: #fff}
-.bigButton a{color: #fff}
+.bigButton , .middleButton{width: 100%;height: 50px;color:#fff;font-size:1.8em;line-height: 50px;text-align: center;color: #fff}
+.bigButton a , .middleButton a{color: #fff}
+.middleButton{width: 90%;margin: 0 auto;font-size: 2em;border-radius: 3px}/*大按钮*/
+.middleButton a{color: #fff}
 .enable{background-color: #0c7ff2;}
 .disable{background:#999999;}
 .tablist{display: none}
@@ -21,10 +23,11 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 .hide{display: none}
 .whiteBg{background:#fff;}
 .borderBottom{border-bottom: 1px solid #d9d9d9;}
-
+.select{float: left;height:25px;background-image:url(../images/button.png);background-position: center center;width: 80px;background-size: 80px 25px;line-height: 25px;text-align: center;font-size: 1.6em;margin-right: 10px;position: relative;}
+.select span{background-image: url(../images/down_arr.png);background-repeat: no-repeat;background-position: 95% center;background-size:0.5em auto;display: block;width: 100%}
+.select .kit{width: 100%;height:100%;display: block;position: absolute;left: 0;top: 0;opacity: 0;-webkit-appearance: none}
 
 /*partner*/
-.intro{color: #333333}
 .main .cover{width: 100%;background-size:100% auto;background-position: center center}
 .partner .cover{height:145px;background-image:url(../images/partner_bg.jpg);padding-top:25px;}
 .cover .avatar , .cover .avatar img{width:8.4em;height:8.4em;border-radius: 8.4em;}
@@ -33,7 +36,8 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 .album{width: 88%;padding: 6% 5% 3%}
 .album li{width: 31.2%;/*31.6%*/float: left;margin:0 3.2% 3.2% 0}
 .album li:nth-child(3n){margin-right: 0}
-.main h3{width: 95%;border: 1px solid #d9d9d9;border-right: none;border-left: none;color:#999;background: #f5f5f5;height:44px;font-size: 1.6em;line-height: 50px;padding-left:5% }
+
+.main h3{width: 95%;border: 1px solid #d9d9d9;border-right: none;border-left: none;color:#999;background: #f5f5f5;font-size: 1.4em;padding-left:5%;padding-top: 20px;padding-bottom: 10px}
 .partner .module p{width: 95%;margin-left: 5%;border-bottom: 1px solid #d9d9d9;color: #333333;font-size: 1.7em;padding:12px 2% 12px 0;line-height: 1.5}
 .partner .module p:last-child{border:none;}
 .partner .module .textarea{padding-bottom: 30px}
@@ -54,3 +58,21 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 .driver .lines .remark{padding:15px 0 20px;}
 .driver .profile{border-top: 1px solid #d9d9d9;margin-bottom: 15px}
 .driver .profile p{font-size: 1.6em;width: 90%;padding-left:5%;padding-right:5%;line-height: 21px;border-bottom: 1px solid #d9d9d9 }
+/*partnerSec*/
+.partnerSec .inputMes{width: 100%;margin-top:20px;border-top:1px solid #d9d9d9 }
+.partnerSec .inputMes p{width: 95%;margin-left:5%;border-bottom:1px solid #d9d9d9;height: 50px;line-height: 50px;font-size: 1.6em;color:#333;background-image: url(../images/down_arr.png);background-repeat: no-repeat;background-position: 95% center;background-size:0.5em auto;overflow: hidden}
+.partnerSec .inputMes p:last-child{border:none;}
+.partnerSec .inputMes p label{width: 50%;display: block;float: left}
+.partnerSec .inputMes p .value{width: 50%;float: left;display: block;text-align: left;}
+
+.partnerSec .date{padding: 10px 5%}
+.partnerSec .end{margin-bottom: 15px;}
+.partnerSec .middleButton{margin-bottom: 30px}
+.partnerSec .peopleCount , .partnerSec .sex{position: relative;}
+.partnerSec .peopleCount em , .partnerSec .sex em{display: block;position: absolute;top: 0;left: 0;width: 100%;height:50px;background:none;}
+
+
+
+
+
+

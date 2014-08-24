@@ -62,7 +62,7 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 /*partnerSec*/
 .partnerSec{width: 200%}
 .partnerSec .inputMes{width: 100%;margin-top:20px;border-top:1px solid #d9d9d9 }
-.partnerSec .inputMes p{width: 95%;margin-left:5%;border-bottom:1px solid #d9d9d9;height: 50px;line-height: 50px;font-size: 1.6em;color:#333;background-image: url(../images/down_arr.png);background-repeat: no-repeat;background-position: 95% center;background-size:0.5em auto;overflow: hidden}
+.partnerSec .inputMes p{width: 95%;margin-left:5%;border-bottom:1px solid #d9d9d9;height: 50px;line-height: 50px;font-size: 1.6em;color:#333;background-image: url(../images/down_arr.png);background-repeat: no-repeat;background-position: 95% center;background-size:6px auto;overflow: hidden}
 .partnerSec .inputMes p:last-child{border:none;}
 .partnerSec .inputMes p label{width: 50%;display: block;float: left}
 .partnerSec .inputMes p .value{width: 50%;float: left;display: block;text-align: left;}
@@ -71,11 +71,13 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 .partnerSec .middleButton{margin-bottom: 30px}
 .partnerSec .peopleCount , .partnerSec .sex{position: relative;}
 .partnerSec .peopleCount em , .partnerSec .sex em{display: block;position: absolute;top: 0;left: 0;width: 100%;height:50px;background:none;}
-.partnerSec .contain , .partnerSec .choiceCity{width: 50%;height:100%;float: left}
-.partnerSec .choiceCity{height:500px;}
+.partnerSec .contain , .partnerSec .choiceCity{width: 50%;float: left}
 .partnerSec .cityList{width: 100%;}
 .partnerSec .cityList li{width: 95%;margin-left: 5%;border-bottom:1px solid #d9d9d9;font-size: 1.6em;padding:10px 0; }
 .partnerSec .cityList li em{float: right;margin-right: 15px;color:#999999;}
+.partnerSec .allCity li{background-image: url(../images/down_arr.png);background-repeat: no-repeat;background-position: 95% center;background-size: 6px auto;position: relative;}
+.partnerSec .allCity select{width: 100%;height:100%;display: block;position: absolute;left: 0;top: 0;opacity: 0;-webkit-appearance: none}
+
 /*resList*/
 .resList li{width: 95%;margin-left: 5%;border-bottom: 1px solid #d9d9d9;overflow: hidden;padding:20px 0;background-image: url(../images/right_arr.png);background-position: 95% center;background-size: 7px auto;background-repeat: no-repeat;}
 .resList li a{color:#333;}

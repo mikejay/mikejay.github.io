@@ -110,20 +110,39 @@
 				});
 
 				//选完城市，返回
-				$('.partnerSec .cityList li').live('tap' , function(){
+				$('.partnerSec .hotCity li').live('tap' , function(){
 					var callback = function(){
 						if (typeof _type != 'undefined' && city) {
 							var p = _type == 'start' ? $('.partnerSec .departure') : $('.partnerSec .destination') ;
 							p.find('span').text(city);
 						};
-
-						//$('head title').html('结伴查询');
 					} ,
 					city = $(this).find('span').text() || ''; 
 
 					$('.partnerSec .contain').animate({
 						'margin-left' : '0' 
 					} , speed , 'ease-in' , callback);
+				});	
+
+
+				//在全部城市里选择了城市
+				$('.partnerSec .allCity select').change(function(){
+					//console.log($(this).val());
+
+					var city = $(this).val() || '' ,
+						callback = function(){
+							if (typeof _type != 'undefined' && city) {
+								var p = _type == 'start' ? $('.partnerSec .departure') : $('.partnerSec .destination') ;
+								p.find('span').text(city);
+							};
+						} ;
+
+					if (city) {
+						$('.partnerSec .contain').animate({
+							'margin-left' : '0' 
+						} , speed , 'ease-in' , callback);
+					};
+
 				});
 
 				//选择

@@ -9,6 +9,7 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 .clearfix:after {content: ".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
 #wrapper{margin:0 auto;overflow-x:hidden;width: 100%;height: 100%;}
 #wrapper img{width: 100%}
+.main{width: 100%;overflow-x:hidden}
 .tab{width: 90%;margin:10px auto;height: 30px;border: 1px solid #0c7ff2;border-radius: 5px}
 .tab li{float: left;width: 50%;height:100%;line-height: 30px;text-align: center;color:#0c7ff2;font-size: 1.6em;color: #0c7ff2}
 .tab li.action{background-color:#0c7ff2;color: #fff}
@@ -59,17 +60,22 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 .driver .profile{border-top: 1px solid #d9d9d9;margin-bottom: 15px}
 .driver .profile p{font-size: 1.6em;width: 90%;padding-left:5%;padding-right:5%;line-height: 21px;border-bottom: 1px solid #d9d9d9 }
 /*partnerSec*/
+.partnerSec{width: 200%}
 .partnerSec .inputMes{width: 100%;margin-top:20px;border-top:1px solid #d9d9d9 }
 .partnerSec .inputMes p{width: 95%;margin-left:5%;border-bottom:1px solid #d9d9d9;height: 50px;line-height: 50px;font-size: 1.6em;color:#333;background-image: url(../images/down_arr.png);background-repeat: no-repeat;background-position: 95% center;background-size:0.5em auto;overflow: hidden}
 .partnerSec .inputMes p:last-child{border:none;}
 .partnerSec .inputMes p label{width: 50%;display: block;float: left}
 .partnerSec .inputMes p .value{width: 50%;float: left;display: block;text-align: left;}
-
 .partnerSec .date{padding: 10px 5%}
 .partnerSec .end{margin-bottom: 15px;}
 .partnerSec .middleButton{margin-bottom: 30px}
 .partnerSec .peopleCount , .partnerSec .sex{position: relative;}
 .partnerSec .peopleCount em , .partnerSec .sex em{display: block;position: absolute;top: 0;left: 0;width: 100%;height:50px;background:none;}
+.partnerSec .contain , .partnerSec .choiceCity{width: 50%;height:100%;float: left}
+.partnerSec .choiceCity{height:500px;}
+.partnerSec .cityList{width: 100%;}
+.partnerSec .cityList li{width: 95%;margin-left: 5%;border-bottom:1px solid #d9d9d9;font-size: 1.6em;padding:10px 0; }
+.partnerSec .cityList li em{float: right;margin-right: 15px;color:#999999;}
 
 
 

@@ -14,206 +14,246 @@
 <body>
 	<div id="wrapper">
 		<div class="main partnerSec">
-			<form id="secForm" onsubmit="return false ;">
-				<div class="inputMes whiteBg">
-					<p class="departure">
-						<label>出发地</label>
-						<span class="value"></span>
-					</p>
-					<p class="destination">
-						<label>出发地</label>
-						<span class="value"></span>
-					</p>	
+			<div class="contain">
+				<form id="secForm" onsubmit="return false ;">
+					<div class="inputMes whiteBg">
+						<p class="departure">
+							<label>出发地</label>
+							<span class="value"></span>
+						</p>
+						<p class="destination">
+							<label>出发地</label>
+							<span class="value"></span>
+						</p>	
 
-					<p class="peopleCount">
-						<label>人数（选填）</label>
-						<span class="value"></span>
-						<em class="select isEm">
-							<select class="kit" name="peopleCount">
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-								<option>6</option>
-								<option>7</option>
-								<option>8</option>
-								<option>9</option>
-								<option>10</option>
-								<option>11</option>
-								<option>12</option>
-								<option>13</option>
-								<option>14</option>
-								<option>15</option>
-								<option>16</option>
-								<option>17</option>
-								<option>18</option>
-								<option>19</option>
-								<option>20</option>
-								<option>21</option>
-								<option>22</option>
-								<option>23</option>
-								<option>24</option>
-								<option>25</option>
-								<option>26</option>
-								<option>27</option>
-								<option>28</option>
-								<option>29</option>
-								<option>30</option>
-							</select>		
-						</em>
-					</p>
-					<p class="sex">
-						<label>性别（选填）</label>
-						<span class="value"></span>
-						<em class="select isEm">
-							<select class="kit" name="sex">
-								<option>男</option>
-								<option>女</option>
-							</select>		
-						</em>
-					</p>	
-				</div>
-
-				<div class="start">
-					<h3>出发时间</h3>
-					<div class="date whiteBg clearfix">
-						<p class="year select">
-							<span>2014年</span>
-							<select class="kit visible" name="startYear">
-								<option selected>2014年</option>
-								<option>2013年</option>
-								<option>2012年</option>
-								<option>2011年</option>
-							</select>
+						<p class="peopleCount">
+							<label>人数（选填）</label>
+							<span class="value"></span>
+							<em class="select isEm">
+								<select class="kit" name="peopleCount">
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+									<option>10</option>
+									<option>11</option>
+									<option>12</option>
+									<option>13</option>
+									<option>14</option>
+									<option>15</option>
+									<option>16</option>
+									<option>17</option>
+									<option>18</option>
+									<option>19</option>
+									<option>20</option>
+									<option>21</option>
+									<option>22</option>
+									<option>23</option>
+									<option>24</option>
+									<option>25</option>
+									<option>26</option>
+									<option>27</option>
+									<option>28</option>
+									<option>29</option>
+									<option>30</option>
+								</select>		
+							</em>
 						</p>
-						<p class="mon select">
-							<span>8月</span>
-							<select class="kit visible" name="startMon">
-								<option>12月</option>
-								<option>11月</option>
-								<option>10月</option>
-								<option>9月</option>
-								<option selected>8月</option>
-								<option>7月</option>
-								<option>6月</option>
-								<option>5月</option>
-								<option>4月</option>
-								<option>3月</option>
-								<option>2月</option>
-								<option>1月</option>
-							</select>
-						</p>
-						<p class="day select">
-							<span>15日</span>
-							<select class="kit visible" name="startDay">
-								<option>31日</option>
-								<option>30日</option>
-								<option>29日</option>
-								<option>28日</option>
-								<option>27日</option>
-								<option>26日</option>
-								<option>25日</option>
-								<option>24日</option>
-								<option>23日</option>
-								<option>22日</option>
-								<option>21日</option>
-								<option>20日</option>
-								<option>19日</option>
-								<option>18日</option>
-								<option>17日</option>
-								<option>16日</option>
-								<option selected>15日</option>
-								<option>14日</option>
-								<option>13日</option>
-								<option>12日</option>
-								<option>11日</option>
-								<option>10日</option>
-								<option>9日</option>
-								<option>8日</option>
-								<option>7日</option>
-								<option>6日</option>
-								<option>5日</option>
-								<option>4日</option>
-								<option>3日</option>
-								<option>2日</option>
-								<option>1日</option>
-							</select>
-						</p>
+						<p class="sex">
+							<label>性别（选填）</label>
+							<span class="value"></span>
+							<em class="select isEm">
+								<select class="kit" name="sex">
+									<option>男</option>
+									<option>女</option>
+								</select>		
+							</em>
+						</p>	
 					</div>
-				</div>
 
-				<div class="end">
-					<h3>返回日期</h3>
-					<div class="date whiteBg clearfix borderBottom">
-						<p class="year select">
-							<span>2014年</span>
-							<select class="kit visible" name="startYear">
-								<option selected>2014年</option>
-								<option>2013年</option>
-								<option>2012年</option>
-								<option>2011年</option>
-							</select>
-						</p>
-						<p class="mon select">
-							<span>8月</span>
-							<select class="kit visible" name="startMon">
-								<option>12月</option>
-								<option>11月</option>
-								<option>10月</option>
-								<option>9月</option>
-								<option selected>8月</option>
-								<option>7月</option>
-								<option>6月</option>
-								<option>5月</option>
-								<option>4月</option>
-								<option>3月</option>
-								<option>2月</option>
-								<option>1月</option>
-							</select>
-						</p>
-						<p class="day select">
-							<span>15日</span>
-							<select class="kit visible" name="startDay">
-								<option>31日</option>
-								<option>30日</option>
-								<option>29日</option>
-								<option>28日</option>
-								<option>27日</option>
-								<option>26日</option>
-								<option>25日</option>
-								<option>24日</option>
-								<option>23日</option>
-								<option>22日</option>
-								<option>21日</option>
-								<option>20日</option>
-								<option>19日</option>
-								<option>18日</option>
-								<option>17日</option>
-								<option>16日</option>
-								<option selected>15日</option>
-								<option>14日</option>
-								<option>13日</option>
-								<option>12日</option>
-								<option>11日</option>
-								<option>10日</option>
-								<option>9日</option>
-								<option>8日</option>
-								<option>7日</option>
-								<option>6日</option>
-								<option>5日</option>
-								<option>4日</option>
-								<option>3日</option>
-								<option>2日</option>
-								<option>1日</option>
-							</select>
-						</p>
+					<div class="start">
+						<h3>出发时间</h3>
+						<div class="date whiteBg clearfix">
+							<p class="year select">
+								<span>2014年</span>
+								<select class="kit visible" name="startYear">
+									<option selected>2014年</option>
+									<option>2013年</option>
+									<option>2012年</option>
+									<option>2011年</option>
+								</select>
+							</p>
+							<p class="mon select">
+								<span>8月</span>
+								<select class="kit visible" name="startMon">
+									<option>12月</option>
+									<option>11月</option>
+									<option>10月</option>
+									<option>9月</option>
+									<option selected>8月</option>
+									<option>7月</option>
+									<option>6月</option>
+									<option>5月</option>
+									<option>4月</option>
+									<option>3月</option>
+									<option>2月</option>
+									<option>1月</option>
+								</select>
+							</p>
+							<p class="day select">
+								<span>15日</span>
+								<select class="kit visible" name="startDay">
+									<option>31日</option>
+									<option>30日</option>
+									<option>29日</option>
+									<option>28日</option>
+									<option>27日</option>
+									<option>26日</option>
+									<option>25日</option>
+									<option>24日</option>
+									<option>23日</option>
+									<option>22日</option>
+									<option>21日</option>
+									<option>20日</option>
+									<option>19日</option>
+									<option>18日</option>
+									<option>17日</option>
+									<option>16日</option>
+									<option selected>15日</option>
+									<option>14日</option>
+									<option>13日</option>
+									<option>12日</option>
+									<option>11日</option>
+									<option>10日</option>
+									<option>9日</option>
+									<option>8日</option>
+									<option>7日</option>
+									<option>6日</option>
+									<option>5日</option>
+									<option>4日</option>
+									<option>3日</option>
+									<option>2日</option>
+									<option>1日</option>
+								</select>
+							</p>
+						</div>
 					</div>
-				</div>	
 
-				<div class="middleButton enable" id="searchBut">
-					<a href="javascript:;">查询</a>
+					<div class="end">
+						<h3>返回日期</h3>
+						<div class="date whiteBg clearfix borderBottom">
+							<p class="year select">
+								<span>2014年</span>
+								<select class="kit visible" name="startYear">
+									<option selected>2014年</option>
+									<option>2013年</option>
+									<option>2012年</option>
+									<option>2011年</option>
+								</select>
+							</p>
+							<p class="mon select">
+								<span>8月</span>
+								<select class="kit visible" name="startMon">
+									<option>12月</option>
+									<option>11月</option>
+									<option>10月</option>
+									<option>9月</option>
+									<option selected>8月</option>
+									<option>7月</option>
+									<option>6月</option>
+									<option>5月</option>
+									<option>4月</option>
+									<option>3月</option>
+									<option>2月</option>
+									<option>1月</option>
+								</select>
+							</p>
+							<p class="day select">
+								<span>15日</span>
+								<select class="kit visible" name="startDay">
+									<option>31日</option>
+									<option>30日</option>
+									<option>29日</option>
+									<option>28日</option>
+									<option>27日</option>
+									<option>26日</option>
+									<option>25日</option>
+									<option>24日</option>
+									<option>23日</option>
+									<option>22日</option>
+									<option>21日</option>
+									<option>20日</option>
+									<option>19日</option>
+									<option>18日</option>
+									<option>17日</option>
+									<option>16日</option>
+									<option selected>15日</option>
+									<option>14日</option>
+									<option>13日</option>
+									<option>12日</option>
+									<option>11日</option>
+									<option>10日</option>
+									<option>9日</option>
+									<option>8日</option>
+									<option>7日</option>
+									<option>6日</option>
+									<option>5日</option>
+									<option>4日</option>
+									<option>3日</option>
+									<option>2日</option>
+									<option>1日</option>
+								</select>
+							</p>
+						</div>
+					</div>	
+
+					<div class="middleButton enable" id="searchBut">
+						<a href="javascript:;">查询</a>
+					</div>
+				</form>
+			</div>
+
+			<div class="choiceCity">
+				<nav class="tab">
+					<ul>
+						<li class="action">热门</li>
+						<li>全部</li>
+					</ul>	
+				</nav>
+
+				<div class="cityList whiteBg">
+					<ul class="hotCity tablist show">
+						<li class="currentCity"><span>...</span> <em>当前城市</em></li>
+						<li><span>北京</span></li>
+						<li><span>云南</span></li>
+						<li><span>陕西</span></li>
+						<li><span>北京</span></li>
+						<li><span>云南</span></li>
+						<li><span>陕西</span></li>
+					</ul>
+
+					<ul class="allCity tablist">
+						<li><span>广州</span></li>
+						<li><span>北京</span></li>
+						<li><span>云南</span></li>
+						<li><span>陕西</span></li>
+						<li><span>北京</span></li>
+						<li><span>云南</span></li>
+						<li><span>陕西</span></li>
+						<li><span>广州</span></li>
+						<li><span>北京</span></li>
+						<li><span>云南</span></li>
+						
+					</ul>
+
 				</div>
-			</form>
+
+			</div>
+
 		</div>	
 
 	</div>

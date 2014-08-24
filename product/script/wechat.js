@@ -25,6 +25,9 @@
 						parent.css('background-image' , 'url(images/button_selected.png)');
 					};
 		} ,
+		/*
+		* 获取当前城市
+		*/
 		getCurrentCity = function(){
 			var url = 'http://api.map.baidu.com/location/ip?ak=640be13b5b93ea737af29ee8f584eeff' ,
 				options = {
@@ -33,10 +36,10 @@
 						type : 'get' , 
 						success : function(res){	
 							if (res.status == '0') {
-								var city = res.content.address_detail.city ;
-
-									
-									console.log(city.replace('市' , ''));
+								var city = res.content.address_detail.city ,
+									cityName = city.replace('市' , '') ;
+									$('.currentCity span').text(cityName);
+									//console.log(cityName);
 							}else{
 								alert('无法获取当前地址');
 							}
@@ -44,29 +47,34 @@
 				}
 
 				$.ajax(options);
-		}
+		} ,
+		/*
+		* tab之间地切换
+		* this = { parentClass : '.driver' , li : li }
+		*/
+		switchTab = function(){
+			if(!this.li.hasClass('action')){
+				var index = this.li.index();
 
-		getCurrentCity();
-
+				$(this.parentClass + ' .tab .action').removeClass('action');
+				this.li.addClass('action') ;
+				$(this.parentClass + ' .tablist').removeClass('show');
+				$(this.parentClass + ' .tablist').eq(index).removeClass('hide').addClass('show');
+			}
+		} ;
 
 
 		//司机页面
-		(function(){	
-
+		(function(){
 			$('.driver .tab li').live('tap' , function(){
-				if (!$(this).hasClass('action')) {
-					var index = $(this).index();
+				var o = {
+					parentClass : '.driver' , 
+					li : $(this) 
+				}
 
-					// console.log($('.driver .tablist').eq(index))
-
-					$('.driver .tab .action').removeClass('action');
-					$(this).addClass('action') ;
-					$('.driver .tablist').removeClass('show');
-					$('.driver .tablist').eq(index).removeClass('hide').addClass('show')
-
-				};
-
+				switchTab.call(o) ;
 			});
+
 		})();
 
 
@@ -75,15 +83,54 @@
 			
 			var	goSearch = function(){
 
-				} ;
+				} ,
+				type ; 
 
+				//console.log(type)
+
+				$('.choiceCity .tab li').bind('tap' , function(){
+					var o = {
+						parentClass : ".choiceCity" , 
+						li : $(this)
+					}
+					switchTab.call(o);
+				});
+
+
+				//选择城市 ，切换到选择城市页面
+				$('.partnerSec .inputMes .departure , .partnerSec .inputMes .destination').bind('tap' , function(){
+					_type = $(this).hasClass('departure') ? 'start' : 'end' ;
+
+						$('.partnerSec .contain').animate({
+							'margin-left' : '-100%' 
+						} , 500 , 'ease-out' , getCurrentCity);
+
+						$('head title').html('选择城市');
+				});
+
+				//选完城市，返回
+				$('.partnerSec .cityList li').live('tap' , function(){
+					var callback = function(){
+						if (typeof _type != 'undefined' && city) {
+							var p = _type == 'start' ? $('.partnerSec .departure') : $('.partnerSec .destination') ;
+							p.find('span').text(city);
+						};
+
+						$('head title').html('结伴查询');
+					} ,
+					city = $(this).find('span').text() || ''; 
+
+					$('.partnerSec .contain').animate({
+						'margin-left' : '0' 
+					} , 500 , 'ease-in' , callback);
+				});
+
+				//选择
 				$('.select .kit').change(function(){
 					changeSelect.call($(this));	
 				});
 
 		})();
-
-
 
 
 	});

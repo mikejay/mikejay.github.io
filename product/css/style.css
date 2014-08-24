@@ -76,7 +76,15 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 .partnerSec .cityList{width: 100%;}
 .partnerSec .cityList li{width: 95%;margin-left: 5%;border-bottom:1px solid #d9d9d9;font-size: 1.6em;padding:10px 0; }
 .partnerSec .cityList li em{float: right;margin-right: 15px;color:#999999;}
-
+/*resList*/
+.resList li{width: 95%;margin-left: 5%;border-bottom: 1px solid #d9d9d9;overflow: hidden;padding:20px 0;background-image: url(../images/right_arr.png);background-position: 95% center;background-size: 7px auto;background-repeat: no-repeat;}
+.resList li a{color:#333;}
+.resList li .avatar , .resList .userMes{float: left}
+.resList li .avatar , .resList li .avatar img{width: 60px;height: 60px;border-radius: 60px;overflow: hidden;margin-right: 15px}
+.resList li .avatar{margin-top: 2px}
+.resList .userMes h4{font-size: 1.6em;line-height: 1;margin-bottom: 10px}
+.resList .userMes p{font-size: 1.5em;color:#666;line-height: 1}
+.resList .userMes p.line{margin-bottom: 8px}
 
 
 

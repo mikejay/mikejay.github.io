@@ -82,9 +82,10 @@
 		(function(){
 			
 			var	goSearch = function(){
-
+					window.location.href = 'A6.html' ;
 				} ,
-				type ; 
+				type ,
+				speed = 800 ;
 
 				//console.log(type)
 
@@ -103,9 +104,9 @@
 
 						$('.partnerSec .contain').animate({
 							'margin-left' : '-100%' 
-						} , 500 , 'ease-out' , getCurrentCity);
+						} , speed , 'ease-out' , getCurrentCity);
 
-						$('head title').html('选择城市');
+						//$('head title').html('选择城市');
 				});
 
 				//选完城市，返回
@@ -116,19 +117,24 @@
 							p.find('span').text(city);
 						};
 
-						$('head title').html('结伴查询');
+						//$('head title').html('结伴查询');
 					} ,
 					city = $(this).find('span').text() || ''; 
 
 					$('.partnerSec .contain').animate({
 						'margin-left' : '0' 
-					} , 500 , 'ease-in' , callback);
+					} , speed , 'ease-in' , callback);
 				});
 
 				//选择
 				$('.select .kit').change(function(){
 					changeSelect.call($(this));	
 				});
+
+				//go search
+				$('#searchBut').bind('tap' , function(){
+					goSearch();
+				})
 
 		})();
 

@@ -19,7 +19,34 @@
 					if (obj.length > 0 && val.trim() != '') {
 						obj.text(val) ;	
 					};
-		} ; 
+
+					//如果select处于可见状态（日期选择处），将背景图替换掉
+					if (this.hasClass('visible')) {
+						parent.css('background-image' , 'url(images/button_selected.png)');
+					};
+		} ,
+		getCurrentCity = function(){
+			var url = 'http://api.map.baidu.com/location/ip?ak=640be13b5b93ea737af29ee8f584eeff' ,
+				options = {
+						url : url , 
+						dataType : 'jsonp' , 
+						type : 'get' , 
+						success : function(res){	
+							if (res.status == '0') {
+								var city = res.content.address_detail.city ;
+
+									
+									console.log(city.replace('市' , ''));
+							}else{
+								alert('无法获取当前地址');
+							}
+						} 
+				}
+
+				$.ajax(options);
+		}
+
+		getCurrentCity();
 
 
 

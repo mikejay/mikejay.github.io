@@ -33,7 +33,7 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 .cover .avatar , .cover .avatar img{width:8.4em;height:8.4em;border-radius: 8.4em;}
 .cover .avatar{border:3px solid #fff;overflow: hidden;margin: 0px auto 15px}
 .cover .userInfo{color: #fff;font-size: 1.6em;text-align: center;line-height: 1}
-.album{width: 88%;padding: 6% 5% 3%}
+.album{width: 90%;padding: 6% 5% 3%}
 .album li{width: 31.2%;/*31.6%*/float: left;margin:0 3.2% 3.2% 0}
 .album li:nth-child(3n){margin-right: 0}
 

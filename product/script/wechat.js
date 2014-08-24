@@ -10,7 +10,7 @@
 	//异步加载js
 	head.js(scripts , function(){	
 		//select 组件
-		var changeSelect = function(){
+		var changeSelect0 = function(){
 				var parent = this.parent() ;
 
 				var obj = parent.hasClass('isEm') ? parent.parent().find('span') : parent.find('span'), 
@@ -25,6 +25,18 @@
 						parent.css('background-image' , 'url(images/button_selected.png)');
 					};
 		} ,
+
+		changeSelect = function(){
+			var obj = this.obj , 
+				val = this.value ; 
+
+
+
+				if (obj.length > 0 && val.trim() != '') {
+					obj.text(val) ;	
+				};
+		} ,
+
 		/*
 		* 获取当前城市
 		*/
@@ -38,8 +50,11 @@
 							if (res.status == '0') {
 								var city = res.content.address_detail.city ,
 									cityName = city.replace('市' , '') ;
-									$('.currentCity span').text(cityName);
-									//console.log(cityName);
+
+									if ($('.currentCity').length > 0) {
+										$('.currentCity span').text(cityName);
+									};
+									
 							}else{
 								alert('无法获取当前地址');
 							}
@@ -62,6 +77,19 @@
 				$(this.parentClass + ' .tablist').eq(index).removeClass('hide').addClass('show');
 			}
 		} ;
+
+		//公共
+		$('.select .kit , .selector select').bind('tap' , function(){
+			if ($(this).parent().hasClass('evaluate')) {
+				var p = $(this).parent();
+			}else{
+				var p = $(this).parent().parent();	
+			}
+
+			if (p.hasClass('peopleCount') || p.hasClass('sex') || p.hasClass('evaluate')) {
+				p.find('span').text($(this).val())
+			};
+		});	
 
 
 		//司机页面
@@ -112,7 +140,7 @@
 				//选完城市，返回
 				$('.partnerSec .hotCity li').live('tap' , function(){
 					var callback = function(){
-						if (typeof _type != 'undefined' && city) {
+						if (typeof _type != 'undefined' && city && city != '...') {
 							var p = _type == 'start' ? $('.partnerSec .departure') : $('.partnerSec .destination') ;
 							p.find('span').text(city);
 						};
@@ -127,8 +155,6 @@
 
 				//在全部城市里选择了城市
 				$('.partnerSec .allCity select').change(function(){
-					//console.log($(this).val());
-
 					var city = $(this).val() || '' ,
 						callback = function(){
 							if (typeof _type != 'undefined' && city) {
@@ -145,17 +171,45 @@
 
 				});
 
-				//选择
-				$('.select .kit').change(function(){
-					changeSelect.call($(this));	
-				});
-
 				//go search
 				$('#searchBut').bind('tap' , function(){
 					goSearch();
 				})
-
 		})();
+
+
+		//选择
+		$('.select .kit').change(function(){
+			var me = $(this) ,
+				parent = me.parent() ;
+
+			var o = {
+					obj : parent.hasClass('isEm') ?  parent.parent().find('span') : parent.find('span'),
+					value : me.val() , 
+					me : me
+			} ;
+
+			changeSelect.call(o);	
+		});
+
+		$('.selector select').change(function(){
+			var me = $(this) , 
+				parent = me.parent() ;
+
+			var o = {
+					obj : parent.find('span') , 
+					value : me.val() , 
+					me : me 
+				} ;
+
+			changeSelect.call(o) ;
+		});
+
+
+
+
+
+
 
 
 	});

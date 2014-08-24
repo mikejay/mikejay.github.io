@@ -25,9 +25,23 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 .whiteBg{background:#fff;}
 .borderBottom{border-bottom: 1px solid #d9d9d9;}
 .select{float: left;height:25px;background-image:url(../images/button.png);background-position: center center;width: 80px;background-size: 80px 25px;line-height: 25px;text-align: center;font-size: 1.6em;margin-right: 10px;position: relative;}
-.select span{background-image: url(../images/down_arr.png);background-repeat: no-repeat;background-position: 95% center;background-size:0.5em auto;display: block;width: 100%}
+.select span{background-image: url(../images/down_arr.png);background-repeat: no-repeat;background-position: 95% center;background-size:6px auto;display: block;width: 100%}
 .select .kit{width: 100%;height:100%;display: block;position: absolute;left: 0;top: 0;opacity: 0;-webkit-appearance: none}
+.list{background-color: #fff;width: 100%;border: 1px solid #d9d9d9;border-left: none;border-right: none;margin: 15px 0}
+.list li{width: 95%;margin-left: 5%;border-bottom: 1px solid #d9d9d9;font-size: 1.6em;padding:15px 0;}
+.list li:last-child{border:none;}
+.list li.selector{background-image:url(../images/down_arr.png);background-repeat: no-repeat;background-position: 95% center;background-size:6px auto;position: relative;}
+.list li.selector select{width: 100%;height:100%;display: block;position: absolute;left: 0;top: 0;opacity: 0;-webkit-appearance: none}
+.list li span{margin-left: 15px}
+.list li em{float: right;color: #999999;margin-right: 5%}
 
+/*选择城市*/
+.contain , .choiceCity{width: 50%;float: left}
+.cityList{width: 100%;}
+.cityList li{width: 95%;margin-left: 5%;border-bottom:1px solid #d9d9d9;font-size: 1.6em;padding:10px 0; }
+.cityList li em{float: right;margin-right: 15px;color:#999999;}
+.allCity li{background-image: url(../images/down_arr.png);background-repeat: no-repeat;background-position: 95% center;background-size: 6px auto;position: relative;}
+.allCity select{width: 100%;height:100%;display: block;position: absolute;left: 0;top: 0;opacity: 0;-webkit-appearance: none}
 /*partner*/
 .main .cover{width: 100%;background-size:100% auto;background-position: center center}
 .partner .cover{height:145px;background-image:url(../images/partner_bg.jpg);padding-top:25px;}
@@ -71,6 +85,7 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 .partnerSec .middleButton{margin-bottom: 30px}
 .partnerSec .peopleCount , .partnerSec .sex{position: relative;}
 .partnerSec .peopleCount em , .partnerSec .sex em{display: block;position: absolute;top: 0;left: 0;width: 100%;height:50px;background:none;}
+
 .partnerSec .contain , .partnerSec .choiceCity{width: 50%;float: left}
 .partnerSec .cityList{width: 100%;}
 .partnerSec .cityList li{width: 95%;margin-left: 5%;border-bottom:1px solid #d9d9d9;font-size: 1.6em;padding:10px 0; }
@@ -84,9 +99,22 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 .resList li .avatar , .resList .userMes{float: left}
 .resList li .avatar , .resList li .avatar img{width: 60px;height: 60px;border-radius: 60px;overflow: hidden;margin-right: 15px}
 .resList li .avatar{margin-top: 2px}
-.resList .userMes h4{font-size: 1.6em;line-height: 1;margin-bottom: 10px}
-.resList .userMes p{font-size: 1.5em;color:#666;line-height: 1}
+.resList .userMes h4{font-size: 1.6em;line-height: 1;margin-bottom: 10px;font-family:"HelveticaNeueLTPro-Md", "Helvetica Neue", Helvetica, Arial, Sans-Serif;font-weight: normal;}
+.resList .userMes p{font-size: 1.5em;color:#666;line-height: 1;text-overflow:ellipsis;}
 .resList .userMes p.line{margin-bottom: 8px}
+/*driver sec*/
+.driverSec{}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

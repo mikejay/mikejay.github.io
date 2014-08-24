@@ -10,27 +10,24 @@
 	//异步加载js
 	head.js(scripts , function(){	
 		//select 组件
-		var changeSelect0 = function(){
-				var parent = this.parent() ;
+		// var changeSelect0 = function(){
+		// 		var parent = this.parent() ;
 
-				var obj = parent.hasClass('isEm') ? parent.parent().find('span') : parent.find('span'), 
-					val = this.val() || ''; 
+		// 		var obj = parent.hasClass('isEm') ? parent.parent().find('span') : parent.find('span'), 
+		// 			val = this.val() || ''; 
 
-					if (obj.length > 0 && val.trim() != '') {
-						obj.text(val) ;	
-					};
+		// 			if (obj.length > 0 && val.trim() != '') {
+		// 				obj.text(val) ;	
+		// 			};
 
-					//如果select处于可见状态（日期选择处），将背景图替换掉
-					if (this.hasClass('visible')) {
-						parent.css('background-image' , 'url(images/button_selected.png)');
-					};
-		} ,
-
-		changeSelect = function(){
+		// 			//如果select处于可见状态（日期选择处），将背景图替换掉
+		// 			if (this.hasClass('visible')) {
+		// 				parent.css('background-image' , 'url(images/button_selected.png)');
+		// 			};
+		// } ,
+		var changeSelect = function(){
 			var obj = this.obj , 
 				val = this.value ; 
-
-
 
 				if (obj.length > 0 && val.trim() != '') {
 					obj.text(val) ;	
@@ -76,27 +73,27 @@
 				$(this.parentClass + ' .tablist').removeClass('show');
 				$(this.parentClass + ' .tablist').eq(index).removeClass('hide').addClass('show');
 			}
-		} ;
+		}  ,
+		_speed = 800 ;
 
-		//公共
-		$('.select .kit , .selector select').bind('tap' , function(){
-			if ($(this).parent().hasClass('evaluate')) {
-				var p = $(this).parent();
-			}else{
-				var p = $(this).parent().parent();	
-			}
-
-			if (p.hasClass('peopleCount') || p.hasClass('sex') || p.hasClass('evaluate')) {
-				p.find('span').text($(this).val())
-			};
-		});	
-
-
+		
 		//司机页面
 		(function(){
 			$('.driver .tab li').live('tap' , function(){
 				var o = {
 					parentClass : '.driver' , 
+					li : $(this) 
+				}
+
+				switchTab.call(o) ;
+			});
+
+
+			$('.driverList .tab li').live('tap' , function(){
+				console.log('f')
+
+				var o = {
+					parentClass : '.driverList' , 
 					li : $(this) 
 				}
 
@@ -112,8 +109,7 @@
 			var	goSearch = function(){
 					window.location.href = 'A6.html' ;
 				} ,
-				type ,
-				speed = 800 ;
+				_type  ;
 
 				//console.log(type)
 
@@ -132,7 +128,7 @@
 
 						$('.partnerSec .contain').animate({
 							'margin-left' : '-100%' 
-						} , speed , 'ease-out' , getCurrentCity);
+						} , _speed , 'ease-out' , getCurrentCity);
 
 						//$('head title').html('选择城市');
 				});
@@ -149,7 +145,7 @@
 
 					$('.partnerSec .contain').animate({
 						'margin-left' : '0' 
-					} , speed , 'ease-in' , callback);
+					} , _speed , 'ease-in' , callback);
 				});	
 
 
@@ -176,6 +172,82 @@
 					goSearch();
 				})
 		})();
+
+
+		//司机搜索
+		(function(){
+			$('.driverSec li.keywords').bind('tap' , function(){
+				$('.driverSec .enterKeyword').removeClass('hide');
+
+				$('.driverSec .contain').animate({
+						'margin-left' : '-100%' 
+				} , _speed , 'ease-out' );
+
+			});
+
+			$('.driverSec .keywordInput input').focus(function(){
+				var clearBut = $(this).parent().find('i');
+					if (clearBut.is(":visible") ==false ) {
+						clearBut.fadeIn();
+					};
+
+			}).blur(function(){
+				var value = $(this).val().trim() ;
+
+				if (value == '') {
+					var clearBut = $(this).parent().find('i');
+					clearBut.hide();
+				};
+
+			});	
+
+			$('.driverSec .keywordInput i').bind('tap' , function(){
+				var form = $('.driverSec .keywordForm');
+				form[0].reset();
+				form.find('input').attr('value' , '')
+			});
+
+
+			//form 提交后
+			$('.driverSec .keywordForm').submit(function(){
+				var input = $(this).find('input') , 
+					callback = function(){
+						$('.driverSec .enterKeyword').addClass('hide');
+						$('.driverSec .keywords span').text(input.val())
+					} ;
+
+					input.blur();
+					$('.driverSec .contain').animate({
+							'margin-left' : '0' 
+					} , _speed , 'ease-out' , callback);
+			});	
+
+
+			var clearBut ;
+			$('.driverSec .enterKeyword li').bind('tap' ,function(){
+				var text = $(this).text() , 
+					input = $('.driverSec .keywordForm input') ;
+
+					if (input.val().trim() != '') {
+						var newVal = input.val() + ' ' + text ; 
+					}else{
+						var newVal = text ;
+					}
+
+					input.attr('value' , newVal);
+
+					if (!clearBut) {
+						clearBut =  $('.driverSec .keywordForm i') ;
+					}
+
+					if (clearBut.is(":visible") ==false ) {
+						clearBut.fadeIn();
+					};
+
+			});
+
+		})();
+		//司机搜索end
 
 
 		//选择
@@ -205,11 +277,21 @@
 			changeSelect.call(o) ;
 		});
 
+		//公共
+		$('.select .kit , .selector select').bind('tap' , function(){
+			if ($(this).parent().hasClass('evaluate')) {
+				var p = $(this).parent();
+			}else{
+				var p = $(this).parent().parent();	
+			}
 
-
-
-
-
+			if (p.hasClass('peopleCount') || p.hasClass('sex') || p.hasClass('evaluate')) {
+				var value = $(this).val() ;
+				setTimeout(function(){
+					p.find('span').text(value)
+				} , 400);
+			};
+		});	
 
 
 	});

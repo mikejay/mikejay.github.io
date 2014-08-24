@@ -14,7 +14,7 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 .tab li{float: left;width: 50%;height:100%;line-height: 30px;text-align: center;color:#0c7ff2;font-size: 1.6em;color: #0c7ff2}
 .tab li.action{background-color:#0c7ff2;color: #fff}
 .bigButton , .middleButton{width: 100%;height: 50px;color:#fff;font-size:1.8em;line-height: 50px;text-align: center;color: #fff}
-.bigButton a , .middleButton a{color: #fff}
+.bigButton a , .middleButton a{color: #fff;height:100%;width: 100%;display: block;}
 .middleButton{width: 90%;margin: 0 auto;font-size: 2em;border-radius: 3px}/*大按钮*/
 .middleButton a{color: #fff}
 .enable{background-color: #0c7ff2;}
@@ -94,16 +94,23 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 .partnerSec .allCity select{width: 100%;height:100%;display: block;position: absolute;left: 0;top: 0;opacity: 0;-webkit-appearance: none}
 
 /*resList*/
-.resList li{width: 95%;margin-left: 5%;border-bottom: 1px solid #d9d9d9;overflow: hidden;padding:20px 0;background-image: url(../images/right_arr.png);background-position: 95% center;background-size: 7px auto;background-repeat: no-repeat;}
-.resList li a{color:#333;}
-.resList li .avatar , .resList .userMes{float: left}
-.resList li .avatar , .resList li .avatar img{width: 60px;height: 60px;border-radius: 60px;overflow: hidden;margin-right: 15px}
-.resList li .avatar{margin-top: 2px}
+.resList .data li{width: 95%;margin-left: 5%;border-bottom: 1px solid #d9d9d9;overflow: hidden;padding:20px 0;background-image: url(../images/right_arr.png);background-position: 95% center;background-size: 7px auto;background-repeat: no-repeat;}
+.resList .data li a{color:#333;}
+.resList .data li .avatar , .resList .userMes{float: left}
+.resList .data li .avatar , .resList li .avatar img{width: 60px;height: 60px;border-radius: 60px;overflow: hidden;margin-right: 15px}
+.resList .data li .avatar{margin-top: 2px}
 .resList .userMes h4{font-size: 1.6em;line-height: 1;margin-bottom: 10px;font-family:"HelveticaNeueLTPro-Md", "Helvetica Neue", Helvetica, Arial, Sans-Serif;font-weight: normal;}
 .resList .userMes p{font-size: 1.5em;color:#666;line-height: 1;text-overflow:ellipsis;}
 .resList .userMes p.line{margin-bottom: 8px}
+.resList .userMes p em{margin-left: 10px}
 /*driver sec*/
-.driverSec{}
+.driverSec{width:200%;}
+.driverSec .enterKeyword{width: 50%;float: left;margin-top:15px;}
+.driverSec .enterKeyword .list{margin-top: 0;border-top: none}
+.driverSec .keywordInput{width: 100%;background-color: #fff;border-top: 1px solid #d9d9d9 ;overflow: hidden;position: relative;}
+.driverSec .keywordInput input{width: 95%;height: 100%;border: none;background-color: #fff;font-size: 1.6em;padding:15px 0;padding-left:5% }
+.driverSec .keywordInput i{display: block;width: 34px;height:34px;position: absolute;right:5%;top:50%;margin-top: -8px;margin-right:-17px;display: none}
+#wrapper .driverSec i img{width: 50%}
 
 
 

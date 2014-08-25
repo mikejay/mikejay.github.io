@@ -74,8 +74,49 @@
 				$(this.parentClass + ' .tablist').eq(index).removeClass('hide').addClass('show');
 			}
 		}  ,
-		_speed = 800 ;
 
+		autoMargin = function(){
+			if ($('.serveRang').length > 0) {
+				var top = $('.serveRang .choiceList').height() + 10 ;
+				$('#wrapper').animate({'margin-top' : top} , 0 , 'ease-in' ) ;
+			};	
+		} ,
+
+		_v = [] ;
+		selectCity = function(){
+			var value = this.val();	
+				_v = [] ;	
+
+			$('.serveRang .choiceList li').each(function(){
+				var text = $(this).text().replace(' x' , '');
+					_v.push(text);
+			});	
+			// console.log()
+
+
+			if (value && $.inArray(value , _v) < 0 ) {
+				var h = '<li>'+value+' x</li>' ;
+				$(h).appendTo($('.serveRang .choiceList'));
+
+				if ($('.serveRang .serveList').is(":visible") == false ) {
+					$('.serveRang .serveList').show();
+				};
+
+				autoMargin();
+			};
+		} ,
+
+		removeObj = function(){
+			var obj = this ;
+
+			if (obj.length >0) {
+				obj.remove();
+
+				autoMargin();
+
+			};
+		} , 
+		_speed = 800 ;
 		
 		//司机页面
 		(function(){
@@ -293,7 +334,37 @@
 					p.find('span').text(value)
 				} , 400);
 			};
-		});	
+		});		
+
+		//如果是在G2
+
+		(function(){
+			if ($('.serveRang').length > 0) {
+				//autoMargin();
+			};
+
+			$('.serveRang .allCity select').change(function(){
+				selectCity.call($(this));
+			});
+
+			//selectCity
+			$('.serveRang .choiceList li').live('tap' , function(){
+				removeObj.call($(this)) ;
+			});
+
+			// var a = [1 , 2 ,3 , 4] ;
+			// var b = 0 ; 
+
+			// console.log($.inArray(b , a))
+
+
+		})();
+
+
+
+
+		
+
 
 
 	});

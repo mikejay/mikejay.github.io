@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+	<title>完善资料</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="Nid Inc." />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="wrapper">
+		<div class="main profileCpl">
+			<form class="profile">
+				<ul class="list">
+					<li class="name input">
+						<input value="" type="text" placeholder="姓名" name="name" />
+					</li>
+					<li class="driveAge selector">
+						<label>驾龄</label>
+						<input value="" type="hidden" placeholder="驾龄" name="driveAge" />  
+						<select class="kit" name="driverAgeSec">
+							<option>1-5年</option>
+							<option>5－10年</option>
+							<option>10-15年</option>
+							<option>15－20年</option>
+							<option>20年以上</option>
+						</select>
+					</li>
+					<li class="identity input">
+						<input value="" type="text" placeholder="身份证" name="identity" />
+					</li>
+					<li class="birthplace selector">
+						<label>籍贯</label>
+						<input value="" type="hidden" placeholder="籍贯" name="birthplace" />
+
+						<select class="kit" name="birthplaceSec">
+							<option>广东</option>
+							<option>北京</option>
+							<option>上海</option>
+							<option>深圳</option>
+							<option>杭州</option>
+						</select>
+					</li>
+					<li class="birthplace selector">
+						<label>服务范围</label>
+						<input value="" type="hidden" placeholder="籍贯" name="birthplace" />
+					</li>
+					<li class="plate input">
+						<input value="" type="text" placeholder="车牌号" name="plate" />
+					</li>
+					<li class="peopleCount selector">
+						<label>可坐人数</label>
+						<input value="" type="hidden" placeholder="" name="count" />
+
+						<select class="kit" name="peopleCountSec">
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+						</select>
+					</li>
+					<li class="carType input">
+						<input value="" type="text" placeholder="车型号（选填 例 沃尔沃cx60）" name="carType" />
+					</li>
+					<li class="carAge selector">
+						<label>车龄（选填）</label>
+						<input value="" type="hidden" placeholder="" name="carAge" />
+
+						<select class="kit" name="carAgeSec">
+							<option>1年内</option>
+							<option>1-3年</option>
+							<option>3年以上</option>
+							
+						</select>
+					</li>
+				</ul>	
+			</form>
+
+			<div class="buttonList">
+				<div class="middleButton white uploadAvatar">
+					<a href="javascript:;">添加头像</a>
+				</div>
+				<div class="middleButton white addLine">
+					<a href="javascript:;">添加路线</a>
+				</div>
+			</div>
+
+			<div class="bigButton enable" id="driverAppNext">
+				<a href="D1.html">提交审核</a>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="script/Head.js"></script>
+	<script type="text/javascript" src="script/wechat.js"></script>
+</body>
+</html>

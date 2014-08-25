@@ -179,7 +179,7 @@
 			$('.driverSec li.keywords').bind('tap' , function(){
 				//跳转到关键词输入：C6
 				window.location.href = 'C6.html';
-				
+
 				// $('.driverSec .enterKeyword').removeClass('hide');
 				// $('.driverSec .contain').animate({
 				// 		'margin-left' : '-100%' 
@@ -299,3 +299,10 @@
 	});
 
 })();
+
+// document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {  
+
+// 	WeixinJSBridge.call('hideOptionMenu'); 
+// }
+
+

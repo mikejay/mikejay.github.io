@@ -32,6 +32,7 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 .list{background-color: #fff;width: 100%;border: 1px solid #d9d9d9;border-left: none;border-right: none;margin: 15px 0}
 .list li{width: 95%;margin-left: 5%;border-bottom: 1px solid #d9d9d9;font-size: 1.6em;padding: 15px 0;}
 .list li.input{padding: 0;}
+.list li.textarea{padding: 15px 0}
 .list li:last-child{border:none;}
 .list li.selector{background-image:url(../images/down_arr.png);background-repeat: no-repeat;background-position: 95% center;background-size:6px auto;position: relative;padding: 15px 0}
 .list li.selector select{width: 100%;height:100%;display: block;position: absolute;left: 0;top: 0;opacity: 0;-webkit-appearance: none}
@@ -40,6 +41,7 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 .list li ::-webkit-input-placeholder { color:#333; }
 .list li input:-moz-placeholder{ color: #333; }
 .list li input{font-size: 1em;width:100%;padding: 15px 0;border: none}
+.list li textarea{font-size: 1em;width: 100%;height:100%;height: 70px;border: none}
 
 /*选择城市*/
 .contain , .choiceCity{width: 50%;float: left}
@@ -124,6 +126,12 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 .driverApply .password em{}
 .driverApply .applyForm input{width: 100%;height: 100%;font-size: 1em;color: #333;border: none;background:transparent;padding: 14px 0}
 .profileCpl .buttonList .middleButton{margin-bottom: 15px}
+/*applySuccess*/
+.applySuccess .tips{text-align: center;height:204px;position: absolute;top:50%;margin-top:-92px;width: 100%}
+.applySuccess .tips i{background-image: url(../images/success.png);background-repeat: no-repeat;background-size: 95px 95px;width: 95px;height: 95px;display: block;margin: 0 auto 20px}
+.applySuccess .tips h4{font-size: 2em;line-height: 1;margin-bottom: 15px}
+.applySuccess .tips p{font-size: 1.8em;color: #999;line-height: 1}
+
 
 
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
 <head>
-	<title>司机查询</title>
+	<title>关键词</title>
 	<meta charset="utf-8" />
 	<meta name="author" content="Nid Inc." />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
@@ -14,30 +14,31 @@
 <body>
 	<div id="wrapper">
 		<div class="main driverSec">
-			<div class="contain"> 
-				<ul class="list">
-					<li class="range selector"><label>服务范围</label></li>
-					<li class="evaluate selector">
-						<label>好评率</label>
-						<span></span>
-						<select class="kit" name="evaluate">
-							<option>95%以上</option>
-							<option>85%以上</option>
-							<option>75%以上</option>
-						</select>
-					</li>
-					<li class="keywords">
-						<label>关键词</label>
-						<span></span>
-						<em>选填</em>
-					</li>
-				</ul>	
-
-				<div class="middleButton enable" id="driverSecBut">
-					<a href="D1.html">查询</a>
+			<div class="enterKeyword">
+				<form class="keywordForm" onsubmit="return false ;">
+					<p class="keywordInput">
+						<input value="" placeholder="输入景区或城市" name="keyword" />
+						<i><img src="images/clear.png" /></i>
+					</p>	
+				</form>
+				<div class="hotPlace">
+					<h3>热门</h3>
+					<ul class="list">
+						<li>丽江周边</li>
+						<li>玉龙雪山</li>
+						<li>香格里拉</li>
+						<li>泸沽湖</li>
+						<li>丽江周边</li>
+						<li>玉龙雪山</li>
+						<li>香格里拉</li>
+						<li>泸沽湖</li>
+						<li>丽江周边</li>
+						<li>玉龙雪山</li>
+						<li>香格里拉</li>
+						<li>泸沽湖</li>
+					</ul>
 				</div>
 			</div>
-			
 		</div>
 	</div>
 

@@ -177,11 +177,13 @@
 		//司机搜索
 		(function(){
 			$('.driverSec li.keywords').bind('tap' , function(){
-				$('.driverSec .enterKeyword').removeClass('hide');
-
-				$('.driverSec .contain').animate({
-						'margin-left' : '-100%' 
-				} , _speed , 'ease-out' );
+				//跳转到关键词输入：C6
+				window.location.href = 'C6.html';
+				
+				// $('.driverSec .enterKeyword').removeClass('hide');
+				// $('.driverSec .contain').animate({
+				// 		'margin-left' : '-100%' 
+				// } , _speed , 'ease-out' );
 
 			});
 

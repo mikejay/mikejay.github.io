@@ -131,9 +131,11 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 .applySuccess .tips i{background-image: url(../images/success.png);background-repeat: no-repeat;background-size: 95px 95px;width: 95px;height: 95px;display: block;margin: 0 auto 20px}
 .applySuccess .tips h4{font-size: 2em;line-height: 1;margin-bottom: 15px}
 .applySuccess .tips p{font-size: 1.8em;color: #999;line-height: 1}
-
-
-
+.complaintForm .textarea{width: 100%;border:1px solid #d9d9d9;border-left: none;border-right: none;margin:15px 0;background: #fff}
+.complaintForm textarea{padding: 15px 5% 25px;font-size: 1.6em;height: 100%;width:90%;border: none;border-radius: 0;line-height: 21px;height: 63px}
+.complaint .callMe{text-align: center;margin-top: 30px;font-size: 1.6em}
+.complaint .callMe p{margin-bottom: 10px;color: #999}
+.complaint .callMe a{color: #0c7ff2}
 
 
 

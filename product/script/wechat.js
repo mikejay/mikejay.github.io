@@ -286,7 +286,6 @@
 					if (clearBut.is(":visible") ==false ) {
 						clearBut.fadeIn();
 					};
-
 			});
 
 		})();
@@ -339,11 +338,11 @@
 		//如果是在G2
 
 		(function(){
-			if ($('.serveRang').length > 0) {
-				//autoMargin();
-			};
+			// if ($('.serveRang').length > 0) {
+			// 	//autoMargin();
+			// };
 
-			$('.serveRang .allCity select').change(function(){
+			$('.serveRang .allCity select').blur(function(){
 				selectCity.call($(this));
 			});
 
@@ -352,28 +351,15 @@
 				removeObj.call($(this)) ;
 			});
 
-			// var a = [1 , 2 ,3 , 4] ;
-			// var b = 0 ; 
-
-			// console.log($.inArray(b , a))
+		
 
 
 		})();
 
 
 
-
-		
-
-
-
 	});
 
 })();
-
-// document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {  
-
-// 	WeixinJSBridge.call('hideOptionMenu'); 
-// }
 
 

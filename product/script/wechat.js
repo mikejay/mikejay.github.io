@@ -5,7 +5,10 @@
 */
 (function(){
 
-	var scripts = ['script/Zepto.min.js' , 'script/WeixinApi.js' , 'script/ZeptoScroll.min.js'] ;
+	var scripts = ['script/Zepto.min.js' , 'script/WeixinApi.js' , 'script/ZeptoScroll.min.js']  ,
+		ua = navigator.userAgent.toLowerCase() ,
+		isApple = ua.match(/ipad|iphone|ipod/i) ? true : false ,
+		selectEvent = isApple ? 'blur' : 'change' ;
 
 	//异步加载js
 	head.js(scripts , function(){	
@@ -113,6 +116,19 @@
 				obj.remove();
 
 				autoMargin();
+
+			};
+		} , 
+
+		deletePhoto = function(){
+			if (confirm("确定要删除该照片？")) {
+
+				//do delete 
+
+				var li = this.parent();
+					li.fadeOut();
+
+					
 
 			};
 		} , 
@@ -293,7 +309,7 @@
 
 
 		//选择
-		$('.select .kit').change(function(){
+		$('.select .kit').bind(selectEvent , function(){
 			var me = $(this) ,
 				parent = me.parent() ;
 
@@ -306,7 +322,7 @@
 			changeSelect.call(o);	
 		});
 
-		$('.selector select').change(function(){
+		$('.selector select').bind(selectEvent , function(){
 			var me = $(this) , 
 				parent = me.parent() ;
 
@@ -317,32 +333,27 @@
 				} ;
 
 			changeSelect.call(o) ;
-		});
+		});	
 
 		//公共
-		$('.select .kit , .selector select').bind('tap' , function(){
-			if ($(this).parent().hasClass('evaluate')) {
-				var p = $(this).parent();
-			}else{
-				var p = $(this).parent().parent();	
-			}
+		// $('.select .kit , .selector select').bind('tap' , function(){
+		// 	if ($(this).parent().hasClass('evaluate')) {
+		// 		var p = $(this).parent();
+		// 	}else{
+		// 		var p = $(this).parent().parent();	
+		// 	}
 
-			if (p.hasClass('peopleCount') || p.hasClass('sex') || p.hasClass('evaluate')) {
-				var value = $(this).val() ;
-				setTimeout(function(){
-					p.find('span').text(value)
-				} , 400);
-			};
-		});		
+		// 	if (p.hasClass('peopleCount') || p.hasClass('sex') || p.hasClass('evaluate')) {
+		// 		var value = $(this).val() ;
+		// 		setTimeout(function(){
+		// 			p.find('span').text(value);
+		// 		} , 400);
+		// 	};
+		// });		
 
 		//如果是在G2
-
 		(function(){
-			// if ($('.serveRang').length > 0) {
-			// 	//autoMargin();
-			// };
-
-			$('.serveRang .allCity select').blur(function(){
+			$('.serveRang .allCity select').bind(selectEvent , function(){
 				selectCity.call($(this));
 			});
 
@@ -351,10 +362,23 @@
 				removeObj.call($(this)) ;
 			});
 
-		
-
-
 		})();
+
+		$('.touristApply .tab li').live('tap' , function(){
+			var o = {
+				parentClass : '.touristApply' , 
+				li : $(this) 
+			}
+
+			switchTab.call(o) ;
+		});
+
+		//删除照片
+		$('.album .delete').live('tap' , function(){
+			var obj = $(this) ;
+
+			deletePhoto.call(obj);
+		});
 
 
 

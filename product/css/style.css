@@ -6,6 +6,7 @@ a img{border:none;}
 em{font-style: normal;}
 h1,h2,h3,h4,h5,h6{font-weight:500;font-family:"Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;}
 abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video{display:block;}
+input:focus {border:none;}
 .clearfix:after {content: ".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
 #wrapper{margin:0 auto;overflow-x:hidden;width: 100%;height: 100%;}
 #wrapper img{width: 100%}
@@ -42,6 +43,13 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 .list li input:-moz-placeholder{ color: #333; }
 .list li input{font-size: 1em;width:100%;padding: 15px 0;border: none}
 .list li textarea{font-size: 1em;width: 100%;height:100%;height: 70px;border: none}
+
+.form li ::-webkit-input-placeholder { color:#999; }
+.form li input:-moz-placeholder{ color: #999; }
+
+/*.form li{overflow: hidden;position: relative;}
+.form li label{width:;float: left}
+*/
 
 /*选择城市*/
 .contain , .choiceCity{width: 50%;float: left}
@@ -88,8 +96,8 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 .partnerSec .inputMes p:last-child{border:none;}
 .partnerSec .inputMes p label{width: 50%;display: block;float: left}
 .partnerSec .inputMes p .value{width: 50%;float: left;display: block;text-align: left;}
-.partnerSec .date{padding: 10px 5%}
-.partnerSec .end{margin-bottom: 15px;}
+.partnerSec .date ,  .touristApply .date{padding: 10px 5%}
+.partnerSec .end , .touristApply .end{margin-bottom: 15px;}
 .partnerSec .middleButton{margin-bottom: 30px}
 .partnerSec .peopleCount , .partnerSec .sex{position: relative;}
 .partnerSec .peopleCount em , .partnerSec .sex em{display: block;position: absolute;top: 0;left: 0;width: 100%;height:50px;background:none;}
@@ -136,12 +144,27 @@ abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mar
 .complaint .callMe{text-align: center;margin-top: 30px;font-size: 1.6em}
 .complaint .callMe p{margin-bottom: 10px;color: #999}
 .complaint .callMe a{color: #0c7ff2}
-
 .serveRang .serveList{position: fixed;top: 0;left: 0;background:#f5f5f5;width: 100%;z-index: 1;display: none}
 .serveRang .choiceList{width: 90%;margin: 15px 5% 0;}
 .serveRang .choiceList li{float: left;margin-right: 10px;border: 1px solid #ccc;font-size: 1.6em;color: #626262;border-radius: 3px;padding: 8px 10px 8px 15px;margin-bottom:10px;background: #fefefe;background: -webkit-linear-gradient(top,#fefefe,#f7f7f7 80%,#f1f1f1);}
 .serveRang .save{position: fixed;bottom: 0;left: 0}
 #serveRang{margin-bottom: 50px}
+
+.touristApply .saveApply{margin-bottom: 15px}
+.touristApply .uneeds .tip{margin-bottom: 0;border-bottom:none;padding-bottom: 0}
+.touristApply .uneeds .delete , .touristApply .uneeds a{color:#0c7ff2}
+.touristApply .uneeds .list{border-bottom: none;margin-bottom: 0}
+.touristApply .uneeds .list li:last-child{border-bottom: 1px solid #d9d9d9}
+.touristApply .uneeds .album{background-color: #fff;padding-bottom: 0;}
+.touristApply .uneeds .album li{text-align: center;}
+.touristApply .uneeds .album .delete{margin-top: 5px;display: block;margin-bottom: 15px;font-size: 1.4em}
+.touristApply .uneeds .traffic ul{width: 90%;padding: 15px 5%;background-color: #fff;border-bottom: 1px solid #d9d9d9;margin-bottom: 15px}
+.touristApply .uneeds .traffic li{float: left;font-size: 1.4em;margin-right: 15px}
+.touristApply .uneeds .traffic li:last-child{margin-right: 0}
+.touristApply .uneeds .traffic input{width: 1.4em;height:1.4em;border: 1px solid #ccc;background: #f5f5f5;border-radius: 3px;margin-left: 5px}
+
+
+
 
 
 

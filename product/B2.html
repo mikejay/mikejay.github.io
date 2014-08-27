@@ -23,30 +23,70 @@
 			</nav>
 
 			<div class="myProfile">
-				<form name="myProfile">
+				<form name="myProfile submitData">
 					<div class="needs tablist show">
 						<ul class="list form">
 							<li class="">
 								<label>昵称：</label>
 								<span>Lynn</span>
-								<input type="hidden" value="Lynn" name="nick" />
+								<input type="hidden" value="Lynn" name="nick" class="show" />
 							</li>
 
 							<li class="selector">
 								<label>性别</label>
-								<input type="hidden" value="" name="sex" />
+								<span>男</span>
+							<!-- <input type="hidden" value="" name="sex" /> -->
+								<select class="kit" name="sex">
+									<option value="男">男</option>
+									<option value="女">女</option>
+								</select>
 							</li>
 							<li class="selector">
 								<label>出发地</label>
+								<span>广州</span>
 								<input type="hidden" value="" name="departure" />
 							</li>
 							<li class="selector">
 								<label>目的地</label>
+								<span></span>
 								<input type="hidden" value="" name="destination" />
 							</li>
 							<li class="selector">
 								<label>预计人数</label>
-								<input type="hidden" value="" name="peopleCount" />
+								<span></span>
+								<!-- <input type="hidden" value="" name="peopleCount" /> -->
+								<select class="kit" name="peopleCount">
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="2">4</option>
+									<option value="3">5</option>
+									<option value="2">6</option>
+									<option value="3">7</option>
+									<option value="2">8</option>
+									<option value="3">9</option>
+									<option value="2">10</option>
+									<option value="3">11</option>
+									<option value="2">12</option>
+									<option value="3">13</option>
+									<option value="2">14</option>
+									<option value="3">15</option>
+									<option value="2">16</option>
+									<option value="3">17</option>
+									<option value="2">18</option>
+									<option value="3">19</option>
+									<option value="2">20</option>
+									<option value="3">21</option>
+									<option value="2">22</option>
+									<option value="3">23</option>
+									<option value="2">24</option>
+									<option value="3">25</option>
+									<option value="2">26</option>
+									<option value="3">27</option>
+									<option value="2">28</option>
+									<option value="3">29</option>
+									<option value="2">30</option>
+								</select>
+
 							</li>
 							<li class="input">
 								<input value="" placeholder="手机 / 微信 / QQ" name="contact" />
@@ -279,7 +319,7 @@
 					</div><!-- uneeds end -->
 
 
-					<div class="middleButton enable saveApply">
+					<div class="middleButton disable saveApply">
 						<a href="javascript:;">提交报名</a>
 					</div>
 				</form>	

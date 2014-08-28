@@ -5,30 +5,15 @@
 */
 (function(){
 
-	var scripts = ['script/Zepto.min.js' , 'script/WeixinApi.js' , 'script/ZeptoScroll.min.js']  ,
-		ua = navigator.userAgent.toLowerCase() ,
-		isApple = ua.match(/ipad|iphone|ipod/i) ? true : false ,
-		selectEvent = isApple ? 'blur' : 'change' ;
+	scripts = ['script/Zepto.min.js' , 'script/WeixinApi.js' , 'script/ZeptoScroll.min.js']  ,
+	ua = navigator.userAgent.toLowerCase() ,
+	isApple = ua.match(/ipad|iphone|ipod/i) ? true : false ,
+	selectEvent = isApple ? 'blur' : 'change' ;
 
 	//异步加载js
 	head.js(scripts , function(){	
-		//select 组件
-		// var changeSelect0 = function(){
-		// 		var parent = this.parent() ;
-
-		// 		var obj = parent.hasClass('isEm') ? parent.parent().find('span') : parent.find('span'), 
-		// 			val = this.val() || ''; 
-
-		// 			if (obj.length > 0 && val.trim() != '') {
-		// 				obj.text(val) ;	
-		// 			};
-
-		// 			//如果select处于可见状态（日期选择处），将背景图替换掉
-		// 			if (this.hasClass('visible')) {
-		// 				parent.css('background-image' , 'url(images/button_selected.png)');
-		// 			};
-		// } ,
-		var changeSelect = function(){
+		
+		changeSelect = function(){
 			var obj = this.obj , 
 				val = this.value ; 
 
@@ -132,6 +117,21 @@
 
 			};
 		} , 
+		String.prototype.replaceAll = function(s1,s2){
+		　　return this.replace(new RegExp(s1,"gm"),s2);
+		} , 
+		//获取url参数值
+		getUrlParam = function(name){
+			var url = decodeURIComponent(window.location.search).replaceAll(' ' , '');
+
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)") ,
+            	r = url.substr(1).match(reg); 	
+
+            if (r != null){
+            	return unescape(r[2]);
+            } 
+            	return null ;
+        } , 
 		_speed = 800 ;
 		
 		//司机页面
@@ -364,26 +364,19 @@
 
 		})();
 
-		$('.touristApply .tab li').live('tap' , function(){
-			var o = {
-				parentClass : '.touristApply' , 
-				li : $(this) 
-			}
 
-			switchTab.call(o) ;
-		});
+		//load b2 
+		if ($('.touristApply').length > 0) {
+			head.js('script/b2.js');
+		};
 
-		//删除照片
-		$('.album .delete').live('tap' , function(){
-			var obj = $(this) ;
-
-			deletePhoto.call(obj);
-		});
-
-
+		if ($('.choiceCity').length >0) {
+			head.js('script/c2.js');
+		}
 
 	});
 
 })();
+
 
 

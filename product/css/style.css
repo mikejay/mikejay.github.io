@@ -47,6 +47,7 @@ input:focus {border:none;}
 .form li ::-webkit-input-placeholder { color:#999; }
 .form li input:-moz-placeholder{ color: #999; }
 
+.submitData li{overflow: hidden}
 .submitData li label{width: 5em;display: block;}
 .submitData li label , .submitData li span{float: left}
 
@@ -56,7 +57,8 @@ input:focus {border:none;}
 */
 
 /*选择城市*/
-.contain , .choiceCity{width: 50%;float: left}
+/*.contain , .choiceCity{width: 50%;float: left}*/
+.choiceCity{width: 100%}
 .cityList{width: 100%;}
 .cityList li{width: 95%;margin-left: 5%;border-bottom:1px solid #d9d9d9;font-size: 1.6em;padding:10px 0; }
 .cityList li em{float: right;margin-right: 15px;color:#999999;}

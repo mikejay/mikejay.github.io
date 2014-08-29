@@ -13,66 +13,64 @@
 </head>
 <body>
 	<div id="wrapper">
-		<div class="main partnerSec">
-			<div class="contain">
+		<div class="main partnerSec inputForm twoContain">
+			<div class="leftContain show">
 				<form id="secForm" onsubmit="return false ;">
 					<div class="inputMes whiteBg">
-						<p class="departure">
-							<label>出发地</label>
-							<span class="value"></span>
-						</p>
-						<p class="destination">
-							<label>出发地</label>
-							<span class="value"></span>
-						</p>	
+						<ul class="list">
+							<li class="departure selector">
+								<label>出发地</label>
+								<input value="" type="text" placeholder="" name="departure" />
+							</li>
+							<li class="destination selector">
+								<label>出发地</label>
+								<input value="" type="text" placeholder="" name="destination" />
+							</li>	
 
-						<p class="peopleCount">
-							<label>人数（选填）</label>
-							<span class="value"></span>
-							<em class="select isEm">
-								<select class="kit" name="peopleCount">
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-									<option>6</option>
-									<option>7</option>
-									<option>8</option>
-									<option>9</option>
-									<option>10</option>
-									<option>11</option>
-									<option>12</option>
-									<option>13</option>
-									<option>14</option>
-									<option>15</option>
-									<option>16</option>
-									<option>17</option>
-									<option>18</option>
-									<option>19</option>
-									<option>20</option>
-									<option>21</option>
-									<option>22</option>
-									<option>23</option>
-									<option>24</option>
-									<option>25</option>
-									<option>26</option>
-									<option>27</option>
-									<option>28</option>
-									<option>29</option>
-									<option>30</option>
-								</select>		
-							</em>
-						</p>
-						<p class="sex">
-							<label>性别（选填）</label>
-							<span class="value"></span>
-							<em class="select isEm">
-								<select class="kit" name="sex">
-									<option value="男">男</option>
-									<option value="女">女</option>
-								</select>		
-							</em>
-						</p>	
+							<li class="peopleCount selector">
+								<label>人数</label>
+								<input value="" type="text" placeholder="（选填）" name="peopleCount" />
+									<select class="kit" name="peopleCount">
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+										<option>11</option>
+										<option>12</option>
+										<option>13</option>
+										<option>14</option>
+										<option>15</option>
+										<option>16</option>
+										<option>17</option>
+										<option>18</option>
+										<option>19</option>
+										<option>20</option>
+										<option>21</option>
+										<option>22</option>
+										<option>23</option>
+										<option>24</option>
+										<option>25</option>
+										<option>26</option>
+										<option>27</option>
+										<option>28</option>
+										<option>29</option>
+										<option>30</option>
+									</select>		
+							</li>
+							<li class="sex selector">
+								<label>性别</label>
+								<input value="" type="text" placeholder="（选填）" name="sex" />
+									<select class="kit" name="sex">
+										<option value="男">男</option>
+										<option value="女">女</option>
+									</select>		
+							</li>
+						</ul>	
 					</div>
 
 					<div class="start">
@@ -210,6 +208,7 @@
 							</p>
 						</div>
 					</div>	
+				
 
 					<div class="middleButton enable" id="searchBut">
 						<a href="javascript:;">查询</a>
@@ -218,7 +217,7 @@
 			</div>
 
 			<!-- C2 -->
-			<div class="choiceCity">
+			<div class="choiceCity rightContain hide">
 				<nav class="tab">
 					<ul>
 						<li class="action">热门</li>

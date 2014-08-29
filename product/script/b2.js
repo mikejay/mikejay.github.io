@@ -60,7 +60,7 @@
 			};
 
 	} ; 	
-
+	
 	autoValue();
 
 	$('.touristApply .tab li').live('tap' , function(){
@@ -104,7 +104,7 @@
 			}
 	});
 
-		//删除照片
+	//删除照片
 	$('.album .delete').live('tap' , function(){
 		var obj = $(this) ;
 

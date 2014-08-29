@@ -184,25 +184,31 @@
 
         showLeftContain = function(){
         	var callback = this.callback || function(){} ;
-
-			$('.rightContain').addClass('hide').removeClass('show') ;
-			$('.leftContain').addClass('show').removeClass('hide') ;
+        	
+        	$('.leftContain').addClass('show').removeClass('hide');
 
         	$('.leftContain').animate({
 				'margin-left' : '0' 
-			} , _speed , 'ease' , function(){
-				// $('.rightContain').removeClass('show').addClass('hide') ;
+			} , _speed , 'ease' ,function(){
+				//.removeClass('hide') ;
+
+				$('.rightContain').addClass('hide').removeClass('show') ;
+				callback();
 			});
+
+			
         } , 
         showRightContain = function(){
         	var callback = this.callback || function(){} ;	
-        	
+
+
+        	$('.rightContain').addClass('show').removeClass('hide') ;
         	$('.leftContain').animate({
 				'margin-left' : '-100%' 
 			} , _speed , 'ease' , function(){
 
 				$('.leftContain').addClass('hide').removeClass('show') ;
-				$('.rightContain').addClass('show').removeClass('hide') ;
+				
 			});
 
 			
@@ -264,48 +270,54 @@
 
 
 				//选择城市 ，切换到选择城市页面
-				$('.partnerSec .inputMes .departure , .partnerSec .inputMes .destination').bind('tap' , function(){
+				$('.departure , .destination').bind('tap' , function(){
 					_type = $(this).hasClass('departure') ? 'start' : 'end' ;
 
-						$('.partnerSec .contain').animate({
-							'margin-left' : '-100%' 
-						} , _speed , 'ease-out' , getCurrentCity);
+					showRightContain.call({callback : getCurrentCity});
 
-						//$('head title').html('选择城市');
 				});
 
 				//选完城市，返回
 				$('.partnerSec .hotCity li').live('tap' , function(){
+					var me = $(this) ;
 					var callback = function(){
 						if (typeof _type != 'undefined' && city && city != '...') {
-							var p = _type == 'start' ? $('.partnerSec .departure') : $('.partnerSec .destination') ;
-							p.find('span').text(city);
+							var p = _type == 'start' ? $('.departure') : $('.destination') ;
+								p.find('input').attr('value' , city);
 						};
+
+						var o = {
+							value : me.find('span').text().trim() , 
+							label : p.find('label') 
+						} ;
+
+						enterFinish.call(o);
 					} ,
 					city = $(this).find('span').text() || ''; 
+					showLeftContain.call({callback:callback}) ;
 
-					$('.partnerSec .contain').animate({
-						'margin-left' : '0' 
-					} , _speed , 'ease-in' , callback);
 				});	
 
 
 				//在全部城市里选择了城市
-				$('.partnerSec .allCity select').change(function(){
-					var city = $(this).val() || '' ,
+				$('.allCity select').bind(selectEvent , function(){
+					var me = $(this) , 
 						callback = function(){
-							if (typeof _type != 'undefined' && city) {
-								var p = _type == 'start' ? $('.partnerSec .departure') : $('.partnerSec .destination') ;
-								p.find('span').text(city);
+							if (typeof _type != 'undefined' && city && city != '...') {
+								var p = _type == 'start' ? $('.departure') : $('.destination') ;
+									p.find('input').attr('value' , city);
 							};
-						} ;
 
-					if (city) {
-						$('.partnerSec .contain').animate({
-							'margin-left' : '0' 
-						} , speed , 'ease-in' , callback);
-					};
+							var o = {
+								value : me.val() , 
+								label : p.find('label') 
+							} ;
 
+							enterFinish.call(o);
+						},
+						city = $(this).val() || ''; 
+					
+					showLeftContain.call({callback:callback}) ;
 				});
 
 				//go search
@@ -480,6 +492,7 @@
 			enterFinish.call(o);
 		});
 
+	
 
 		//load b2 
 		if ($('.touristApply').length > 0) {

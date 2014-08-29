@@ -55,22 +55,22 @@
 
 	//热门城市
 	$('.hotCity li').bind('tap' , function(){
-		var city = $(this).find('span').text() ; 
-		var o = {
-			city : city
-		} ;
+		// var city = $(this).find('span').text() ; 
+		// var o = {
+		// 	city : city
+		// } ;
 
-		choiced.call(o);
+		// choiced.call(o);
 	});		
 
 	//全部城市选
 	$('.allCity li .kit').bind(selectEvent , function(){
 		// alert('f')
 
-		var city = $(this).val() , 
-			o = {city : city}
+		// var city = $(this).val() , 
+		// 	o = {city : city}
 
-			choiced.call(o)
+		// 	choiced.call(o)
 	}) ;
 
 

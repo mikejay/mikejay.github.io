@@ -50,17 +50,13 @@
 		var callback = function(){
 
 		} ;	
-
-
 		
 		showRightContain.call({callback : callback});
 	}) ;
 
 	//save 
 	$('.profileCpl .saveLine').bind('tap' , function(){
-		
-		console.log('fuxk')
-			
+
 		//do save ,after saved go back 
 		/*
 		var options = {

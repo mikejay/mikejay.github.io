@@ -17,11 +17,15 @@
 			<form class="profile">
 				<ul class="list">
 					<li class="name input">
-						<input value="" type="text" placeholder="姓名" name="name" />
+						<label>姓名</label>
+						<!-- <span>张某某</span> -->
+						<input value="" type="text" placeholder="" name="name" />
 					</li>
 					<li class="driveAge selector">
 						<label>驾龄</label>
-						<input value="" type="hidden" placeholder="驾龄" name="driveAge" />  
+						<!-- <span>1-5年</span> -->
+						<input value="" type="text" placeholder="" name="driveAge" /> 
+
 						<select class="kit" name="driverAgeSec">
 							<option>1-5年</option>
 							<option>5－10年</option>
@@ -31,11 +35,12 @@
 						</select>
 					</li>
 					<li class="identity input">
-						<input value="" type="text" placeholder="身份证" name="identity" />
+						<label>身份证</label>
+						<input value="" type="text" placeholder="" name="identity" />
 					</li>
 					<li class="birthplace selector">
 						<label>籍贯</label>
-						<input value="" type="hidden" placeholder="籍贯" name="birthplace" />
+						<input value="" type="text" placeholder="" name="birthplace" />
 
 						<select class="kit" name="birthplaceSec">
 							<option>广东</option>
@@ -45,16 +50,24 @@
 							<option>杭州</option>
 						</select>
 					</li>
-					<li class="birthplace selector">
+					<li class="service selector">
 						<label>服务范围</label>
-						<input value="" type="hidden" placeholder="籍贯" name="birthplace" />
+						<input value="" type="text" placeholder="" name="service" />
+						<select class="kit" name="service">
+							<option>广东</option>
+							<option>北京</option>
+							<option>上海</option>
+							<option>深圳</option>
+							<option>杭州</option>
+						</select>
 					</li>
 					<li class="plate input">
-						<input value="" type="text" placeholder="车牌号" name="plate" />
+						<label>车牌号</label>
+						<input value="" type="text" placeholder="" name="plate" />
 					</li>
 					<li class="peopleCount selector">
 						<label>可坐人数</label>
-						<input value="" type="hidden" placeholder="" name="count" />
+						<input value="" type="text" placeholder="" name="count" />
 
 						<select class="kit" name="peopleCountSec">
 							<option>2</option>
@@ -67,17 +80,17 @@
 						</select>
 					</li>
 					<li class="carType input">
-						<input value="" type="text" placeholder="车型号（选填 例 沃尔沃cx60）" name="carType" />
+						<label>车型号</label>
+						<input value="" type="text" placeholder="（选填 例 沃尔沃cx60）" name="carType" />
 					</li>
 					<li class="carAge selector">
-						<label>车龄（选填）</label>
-						<input value="" type="hidden" placeholder="" name="carAge" />
+						<label>车龄</label>
+						<input value="" type="text" placeholder="（选填）" name="carAge" />
 
 						<select class="kit" name="carAgeSec">
 							<option>1年内</option>
 							<option>1-3年</option>
 							<option>3年以上</option>
-							
 						</select>
 					</li>
 				</ul>	
@@ -86,6 +99,11 @@
 			<div class="buttonList">
 				<div class="middleButton white uploadBut">
 					<a href="javascript:;">添加头像</a>
+					<form name="avatar" class="avatarForm" >
+						<p>
+							<input type="file" id="avataFile" name="files[]" />
+						</p>
+					</form>
 				</div>
 				<div class="middleButton white addLineBut">
 					<a href="javascript:;">添加路线</a>

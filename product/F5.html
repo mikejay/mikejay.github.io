@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+	<title>完善资料</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="Nid Inc." />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="wrapper">
+		<div class="main profileCpl editProfile twoContain">
+			<div class="leftContain show">
+				<form class="profile">
+					<ul class="list">
+						<li class="name input">
+							<label>姓名：</label>
+							<!-- <span>张某某</span> -->
+							<input value="张某某" type="text" placeholder="" name="name" />
+						</li>
+						<li class="driveAge selector">
+							<label>驾龄：</label>
+							<!-- <span>1-5年</span> -->
+							<input value="1-5年" type="text" placeholder="" name="driveAge" /> 
+
+							<select class="kit" name="driverAgeSec">
+								<option>1-5年</option>
+								<option>5－10年</option>
+								<option>10-15年</option>
+								<option>15－20年</option>
+								<option>20年以上</option>
+							</select>
+						</li>
+						<li class="identity input">
+							<label>身份证：</label>
+							<input value="110108167604236331" type="text" placeholder="" name="identity" />
+						</li>
+						<li class="birthplace selector">
+							<label>籍贯：</label>
+							<input value="广东" type="text" placeholder="" name="birthplace" />
+
+							<select class="kit" name="birthplaceSec">
+								<option>广东</option>
+								<option>北京</option>
+								<option>上海</option>
+								<option>深圳</option>
+								<option>杭州</option>
+							</select>
+						</li>
+						<li class="service selector">
+							<label>服务范围：</label>
+							<input value="广东" type="text" placeholder="" name="service" />
+							<select class="kit" name="service">
+								<option>广东</option>
+								<option>北京</option>
+								<option>上海</option>
+								<option>深圳</option>
+								<option>杭州</option>
+							</select>
+						</li>
+						<li class="plate input">
+							<label>车牌号：</label>
+							<input value="GZ1220" type="text" placeholder="" name="plate" />
+						</li>
+						<li class="peopleCount selector">
+							<label>可坐人数：</label>
+							<input value="10" type="text" placeholder="" name="count" />
+
+							<select class="kit" name="peopleCountSec">
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+							</select>
+						</li>
+						<li class="carType input">
+							<label>车型号：</label>
+							<input value="沃尔沃cx60" type="text" placeholder="（选填 例 沃尔沃cx60）" name="carType" />
+						</li>
+						<li class="carAge selector">
+							<label>车龄：</label>
+							<input value="2年" type="text" placeholder="（选填）" name="carAge" />
+
+							<select class="kit" name="carAgeSec">
+								<option>1年内</option>
+								<option>1-3年</option>
+								<option>3年以上</option>
+							</select>
+						</li>
+					</ul>	
+				</form>
+
+
+				<div class="editAvatar">
+					<p class="avatar">
+						<a href="weixin://viewimage/http://mikejay.github.io/product/images/avatar5.png" >
+							<img src="images/avatar5.png" />
+						</a>
+					</p>
+					<p class="delete"><a href="javascript:;" >删除</a></p>
+
+					<div class="middleButton disable uploadBut">
+						<a href="javascript:;">添加头像</a>
+						<form name="avatar" class="avatarForm" >
+							<p>
+								<input type="file" id="avataFile" name="files[]" />
+							</p>
+						</form>
+					</div>
+				</div>
+
+				<div class="lineList">
+					<ul class="list">
+						<li class="edit">
+							线路1：香格里拉————稻城...
+						</li>
+						<li class="edit">
+							线路2：虎跳峡旅游包车服务...
+						</li>
+						<li class="edit">
+							线路3：大理旅游包车服务...
+						</li>
+					</ul>
+				</div>
+
+
+				<div class="buttonList">
+					<!-- <div class="middleButton white uploadBut">
+						<a href="javascript:;">添加头像</a>
+					</div> -->
+					<div class="middleButton white addLineBut">
+						<a href="javascript:;">添加路线</a>
+					</div>
+				</div>
+
+				<div class="bigButton enable" id="driverAppNext">
+					<a href="javascript:;">提交审核</a>
+				</div>
+			</div><!-- contain end -->
+
+			<div class="addLine rightContain show">
+				<ul class="list">
+					<li class="lineName textarea preValue">
+						<label>线路名称</label>
+						<textarea name="linename" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（例：丽江一日游）"></textarea>
+					</li>
+					<li class="scenic textarea preValue">
+						<label>途经地点</label>
+						<textarea name="scenic" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （例：香格里拉 林治波密 拉萨） 用空格分隔"></textarea>
+					</li>
+					<li class="price input">
+						<label>价格</label>
+						<input type="text" name="price" placeholder="（每人每天）"/>
+					</li>
+					<li class="remark textarea preValue">
+						<label>备注</label>
+						<textarea name="remark" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（例：含午餐费）"></textarea>
+					</li>
+				</ul>
+
+				<div class="bigButton enable saveLine">
+					<a href="javascript:;">保存</a>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+
+	<script type="text/javascript" src="script/Head.js"></script>
+	<script type="text/javascript" src="script/wechat.js"></script>
+</body>
+</html>

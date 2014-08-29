@@ -11,14 +11,19 @@
 	selectEvent = isApple ? 'blur' : 'change' ;
 
 	//异步加载js
-	head.js(scripts , function(){	
-		
+	head.js(scripts , function(){		
+		_speed = 800  ,
 		changeSelect = function(){
 			var obj = this.obj , 
-				val = this.value ; 
+				val = this.value ,
+				input = this.input ;
 
 				if (obj.length > 0 && val.trim() != '') {
 					obj.text(val) ;	
+				};
+
+				if (input.length > 0) {
+					input.attr('value' , val)
 				};
 		} ,
 
@@ -132,7 +137,86 @@
             } 
             	return null ;
         } , 
-		_speed = 800 ;
+
+        //输入完成
+        enterFinish = function(){
+        	var label = this.label  ,
+        		value = this.value  ;
+
+        	if (value.trim() != '' && label.length > 0) {
+        		var text = label.text() ;
+
+        		if (text.indexOf('：') > 0) {
+
+        		}else{
+        			var newText = text + '：' ;
+        			label.text(newText) ;	
+        		}
+        		
+        	}
+
+        	if (value.trim() == '' && label.length > 0) {
+        		var text = label.text() ;
+        		if (text.indexOf('：') > 0) {
+        			var newText = text.replace('：' , '') ;
+        			label.text(newText);
+        		}
+        	};
+
+        } , 
+        autoImportValue = function(){
+        	var val = [
+        			'                  ' , 
+        			'                  ' , 
+        			'' ,
+        			'           '
+        		] ;	
+        	var value = this.textarea.val().trim() , 
+        		index = this.textarea.parent().index() ;
+     		
+        	if (value != '') {
+
+        	}else{	
+        		this.textarea.text(val[index])
+        	}
+
+        } , 
+
+        showLeftContain = function(){
+        	var callback = this.callback || function(){} ;
+
+			$('.rightContain').addClass('hide').removeClass('show') ;
+			$('.leftContain').addClass('show').removeClass('hide') ;
+
+        	$('.leftContain').animate({
+				'margin-left' : '0' 
+			} , _speed , 'ease' , function(){
+				// $('.rightContain').removeClass('show').addClass('hide') ;
+			});
+        } , 
+        showRightContain = function(){
+        	var callback = this.callback || function(){} ;	
+        	
+        	$('.leftContain').animate({
+				'margin-left' : '-100%' 
+			} , _speed , 'ease' , function(){
+
+				$('.leftContain').addClass('hide').removeClass('show') ;
+				$('.rightContain').addClass('show').removeClass('hide') ;
+			});
+
+			
+        } , 
+
+        scrollAnyWhere = function(offset){
+			$.scrollTo({
+				endY: offset ,
+				duration: 200, 
+				callback: function(){
+					    	
+				}
+			});
+		} ;
 		
 		//司机页面
 		(function(){
@@ -315,11 +399,21 @@
 
 			var o = {
 					obj : parent.hasClass('isEm') ?  parent.parent().find('span') : parent.find('span'),
+					input : parent.hasClass('isEm') ?  parent.parent().find('input') : parent.find('input'),
 					value : me.val() , 
 					me : me
 			} ;
 
 			changeSelect.call(o);	
+
+			//bug to fixed
+			var enterObj = {
+				value : me.val(), 
+				label : parent.find('label')
+			} ;
+
+			enterFinish.call(enterObj);
+
 		});
 
 		$('.selector select').bind(selectEvent , function(){
@@ -328,11 +422,19 @@
 
 			var o = {
 					obj : parent.find('span') , 
+					input : parent.find('input') ,
 					value : me.val() , 
 					me : me 
 				} ;
 
 			changeSelect.call(o) ;
+
+			var enterObj = {
+				value : me.val(), 
+				label : parent.find('label')
+			} ;
+
+			enterFinish.call(enterObj);
 		});	
 
 		//公共
@@ -365,6 +467,20 @@
 		})();
 
 
+		//修改label里面的字
+		$('.profileCpl li input').blur(function(){
+			//console.log('f');
+			var label = $(this).parent().find('label') ,
+				value = $(this).val() ;
+			var o = {
+				value : value , 
+				label : label
+			} ; 
+
+			enterFinish.call(o);
+		});
+
+
 		//load b2 
 		if ($('.touristApply').length > 0) {
 			head.js('script/b2.js');
@@ -373,6 +489,10 @@
 		if ($('.choiceCity').length >0) {
 			head.js('script/c2.js');
 		}
+
+		if ($('.addLine').length > 0) {
+			head.js('script/f4.js');
+		};
 
 	});
 

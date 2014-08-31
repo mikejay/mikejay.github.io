@@ -201,7 +201,6 @@
         showRightContain = function(){
         	var callback = this.callback || function(){} ;	
 
-
         	$('.rightContain').addClass('show').removeClass('hide') ;
         	$('.leftContain').animate({
 				'margin-left' : '-100%' 
@@ -278,7 +277,7 @@
 				});
 
 				//选完城市，返回
-				$('.partnerSec .hotCity li').live('tap' , function(){
+				$('.hotCity li').live('tap' , function(){
 					var me = $(this) ;
 					var callback = function(){
 						if (typeof _type != 'undefined' && city && city != '...') {
@@ -326,18 +325,59 @@
 				})
 		})();
 
-
 		//司机搜索
 		(function(){
-			$('.driverSec li.keywords').bind('tap' , function(){
-				//跳转到关键词输入：C6
-				window.location.href = 'C6.html';
+			//判断页面是否在C1
 
-				// $('.driverSec .enterKeyword').removeClass('hide');
-				// $('.driverSec .contain').animate({
-				// 		'margin-left' : '-100%' 
-				// } , _speed , 'ease-out' );
+			if($('.driverSec').length > 0){
+				//将url的参数填充到页面里
+				var autoValue = function(){
+					 var url = window.location.href ; 
+					 if (url.indexOf('?') > 0 ) {
+					 	var classArray = ['range' , 'evaluate' , 'keywords'] ;
 
+					 	for(var i = 0; i < classArray.length ; i++) {
+					 		var obj = $('.'+classArray[i]) ; 
+
+					 		 if (obj.length >0) {
+					 		 	var param = getUrlParam(classArray[i])  ;
+					 		 	if (param != null && param != '') {	
+
+					 		 		 var newVal = param.replaceAll(',' , '  ');
+					 		 		// console.log(newVal)
+
+					 		 		obj.find('input').attr('value' , newVal);
+					 		 		
+					 		 		var text = obj.find('label').text() ;
+					 		 		var newText = text.indexOf('：') > 0 ? text : text + '：' ;
+
+					 		 		obj.find('label').text(newText);
+
+					 		 		var em = obj.find('em') ;
+					 		 		if (em.length > 0) {
+					 		 			em.hide();
+					 		 		};
+					 		 	};
+					 		 };
+					 	};
+
+					 };
+				}
+
+				autoValue();
+			}
+
+			$('li.keywords').bind('tap' , function(){
+				if ($('.driverSec').length > 0) {
+					var value = {
+						range : $('.driverSec .range input').val().trim() || '' , 
+						evaluate : $('.driverSec .evaluate input').val().trim() || '' , 
+						keywords : $('.driverSec .keywords input').val() || ''
+					} ; 
+
+					var paramStr = encodeURIComponent("range="+value.range+'&evaluate='+value.evaluate+'&keywords='+value.keywords) ;
+					window.location.href = 'C6.html?'+paramStr ;
+				};
 			});
 
 			$('.driverSec .keywordInput input').focus(function(){
@@ -359,22 +399,23 @@
 			$('.driverSec .keywordInput i').bind('tap' , function(){
 				var form = $('.driverSec .keywordForm');
 				form[0].reset();
-				form.find('input').attr('value' , '')
+				form.find('input').attr('value' , '');
 			});
 
 
 			//form 提交后
 			$('.driverSec .keywordForm').submit(function(){
-				var input = $(this).find('input') , 
-					callback = function(){
-						$('.driverSec .enterKeyword').addClass('hide');
-						$('.driverSec .keywords span').text(input.val())
-					} ;
+				var input = $(this).find('input') ,
+					value = input.val().replaceAll(' ' , ',') , 
+					location = decodeURIComponent(window.location.href) ,
+					paramStr = location.substring( location.indexOf('?') , location.length ) ;
 
-					input.blur();
-					$('.driverSec .contain').animate({
-							'margin-left' : '0' 
-					} , _speed , 'ease-out' , callback);
+					//将url参数里面的keywords的值替换掉
+					var str = location.substring(location.indexOf('keywords') , location.length) ,
+						replaceStr = str.indexOf('&') > 0 ? str.substring(0 , str.indexOf('&')) : str.substring(0 , str.length)  ,
+						newParStr =encodeURIComponent(paramStr.replace(replaceStr , '') + 'keywords='+value) ;
+
+					 window.location.href = 'C1.html?'+newParStr ;
 			});	
 
 
@@ -492,7 +533,10 @@
 			enterFinish.call(o);
 		});
 
-	
+		//司机报名
+		if ($('.driverApply').length > 0) {
+			head.js('script/f1.js');
+		};
 
 		//load b2 
 		if ($('.touristApply').length > 0) {

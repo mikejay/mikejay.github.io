@@ -13,13 +13,17 @@
 </head>
 <body>
 	<div id="wrapper">
-		<div class="main driverSec">
+		<div class="main driverSec inputForm twoContain">
 			<div class="leftContain"> 
 				<ul class="list">
-					<li class="range selector"><label>服务范围</label></li>
+					<li class="range selector departure">
+						<label>服务范围</label>
+						<input type="text" value="" name="range" />
+					</li>
 					<li class="evaluate selector">
 						<label>好评率</label>
-						<span></span>
+						<input type="text" value="" name="evaluate" />
+
 						<select class="kit" name="evaluate">
 							<option>95%以上</option>
 							<option>85%以上</option>
@@ -28,7 +32,7 @@
 					</li>
 					<li class="keywords">
 						<label>关键词</label>
-						<span></span>
+						<input type="text" value="" name="keywords" />
 						<em>选填</em>
 					</li>
 				</ul>	
@@ -37,6 +41,94 @@
 					<a href="D1.html">查询</a>
 				</div>
 			</div>
+
+			<!-- C2 -->
+			<div class="choiceCity rightContain hide">
+				<nav class="tab">
+					<ul>
+						<li class="action">热门</li>
+						<li>全部</li>
+					</ul>	
+				</nav>
+				<div class="cityList whiteBg">
+					<ul class="hotCity tablist show">
+						<li class="currentCity"><span>...</span> <em>当前城市</em></li>
+						<li><span>北京</span></li>
+						<li><span>云南</span></li>
+						<li><span>陕西</span></li>
+						<li><span>北京</span></li>
+						<li><span>云南</span></li>
+						<li><span>陕西</span></li>
+					</ul>
+
+					<ul class="allCity tablist">
+						<li>
+							<span>B</span>
+							<select class="kit" name="B">
+								<option>北京</option>
+								<option>北海</option>
+							</select>		
+						</li>
+						<li>
+							<span>C</span>
+							<select class="kit" name="B">
+								<option>潮州</option>
+								<option>朝阳</option>
+							</select>
+						</li>
+						<li>
+							<span>D</span>
+							<select class="kit" name="B">
+								<option>潮州</option>
+								<option>朝阳</option>
+							</select>
+						</li>
+						<li>
+							<span>E</span>
+							<select class="kit" name="B">
+								<option>潮州</option>
+								<option>朝阳</option>
+							</select>
+						</li>
+						<li>
+							<span>F</span>
+							<select class="kit" name="B">
+								<option>潮州</option>
+								<option>朝阳</option>
+							</select>
+						</li>
+						<li>
+							<span>C</span>
+							<select class="kit" name="B">
+								<option>潮州</option>
+								<option>朝阳</option>
+							</select>
+						</li>
+						<li>
+							<span>D</span>
+							<select class="kit" name="B">
+								<option>潮州</option>
+								<option>朝阳</option>
+							</select>
+						</li>
+						<li>
+							<span>E</span>
+							<select class="kit" name="B">
+								<option>潮州</option>
+								<option>朝阳</option>
+							</select>
+						</li>
+						<li>
+							<span>F</span>
+							<select class="kit" name="B">
+								<option>潮州</option>
+								<option>朝阳</option>
+							</select>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- C2 end -->
 			
 		</div>
 	</div>

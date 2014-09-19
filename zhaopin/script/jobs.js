@@ -19,7 +19,10 @@ var jobs = (function(){
 		     mode: 'vertical' ,
 			 onSlideChangeStart: function(){
 			 	var slider = $(".swiper-container .swiper-slide:eq(" + mySwiper.activeIndex + ")");	
-			     	slider.find('.text').fadeIn('slow');
+
+			 		setTimeout(function(){
+			 			slider.find('.text').fadeIn('slow');
+			 		} , 500)
 			     	// console.log(slider)
 			     }
 		});

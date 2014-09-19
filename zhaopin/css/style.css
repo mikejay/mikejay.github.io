@@ -5,13 +5,14 @@ h1,h2,h3,h4,h5,h6{font-weight:500;font-family:"Hiragino Sans GB", "Microsoft YaH
 .clearfix:after{content: ".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
 html{font-size: 62.5%;width: 100%;}
 body{width:100%}
-
 .swiper-container{width: 100%;}
-.swiper-slide{height: 100%;background-color: #ecf0f0;position: relative;}
+.swiper-slide{height: 100%;width:100%;background-color: #ecf0f0;position: relative;overflow: hidden}
+.swiper-slide .content{position: relative;height:100%;width:100%;}
 .swiper-slide .pic{position: absolute;bottom:-3px;left: 0}
 .text{position: absolute;z-index: 1;background-color: rgba(0 , 0 , 0 , 0.5);height:80px;width: 100%;bottom:50px;display: none}
 .text img{width: 80%;margin: 0.5em auto;display: block;}
-.first , .third{background-color:#cc1f01 }
+.first{z-index: 9}
+.first , .third{background-color:#cc1f01;}
 .first .text{width: 80%;margin: 2em auto;position: relative;background-color: transparent;display: block;bottom: 0}
 .first .text img{width: 100%}
 .third .letter{width: 58px;margin: 45px auto 23px}

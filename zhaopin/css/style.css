@@ -1,0 +1,30 @@
+*{margin: 0 ; padding: 0 ; text-decoration: none;list-style: none;font-style: normal;}
+img{border: none;width:100%;}
+body{background:none;font-family:"HelveticaNeueLTPro-Md", "Helvetica Neue", Helvetica, Arial, Sans-Serif;}
+h1,h2,h3,h4,h5,h6{font-weight:500;font-family:"Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;}
+.clearfix:after{content: ".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
+html{font-size: 62.5%;width: 100%;}
+body{width:100%}
+
+.swiper-container{width: 100%;}
+.swiper-slide{height: 100%;background-color: #ecf0f0;position: relative;}
+.swiper-slide .pic{position: absolute;bottom:-3px;left: 0}
+.text{position: absolute;z-index: 1;background-color: rgba(0 , 0 , 0 , 0.5);height:80px;width: 100%;bottom:50px;display: none}
+.text img{width: 80%;margin: 0.5em auto;display: block;}
+.first , .third{background-color:#cc1f01 }
+.first .text{width: 80%;margin: 2em auto;position: relative;background-color: transparent;display: block;bottom: 0}
+.first .text img{width: 100%}
+.third .letter{width: 58px;margin: 45px auto 23px}
+.third , .third a{color:#fff;text-align: center;}
+.come{display: none}
+.third h3{font-size: 1.8em}
+.third p  , .third a{font-size: 1.4em}
+.third p{margin-bottom: 1em}
+.third .come{width: 86%;margin: 0 auto;line-height: 1.8;}
+.third .operation{display: block;}
+.third .icons{position: relative;height:70px;margin-bottom: 24px}
+.third .icons li{width: 70px;height: 70px;border-radius:70px;line-height:70px;font-size:1.8em;overflow:hidden;background-color: rgba(255 , 255, 255 , .2);color:#c52100;float: left;position: absolute;left:50%;}
+.third .icons li a{color:#c52100;}
+.third .icons .theFirst{margin-right: 45px;margin-left:-93px}
+.third .icons .theLast{margin-left:23px }
+.third .icons li.action{background-color: #fff}

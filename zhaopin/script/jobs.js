@@ -18,19 +18,36 @@ var jobs = (function(){
 		var mySwiper = new Swiper('.swiper-container',{
 		     mode: 'vertical' ,
 			 onSlideChangeStart: function(){
+			 	$('.text').hide();
+
 			 	var slider = $(".swiper-container .swiper-slide:eq(" + mySwiper.activeIndex + ")");	
+
+			 	if (mySwiper.activeIndex != 0) {
+			 		var oddObj = $('.whoWeAre p.odd'),
+						evenObj = $('.whoWeAre p.even') ;
+
+						if (oddObj.hasClass('animFirst')) {
+							oddObj.removeClass('animFirst');
+						};
+
+						if (evenObj.hasClass('animSecond')) {
+							evenObj.removeClass('animSecond')
+						};
+			 	}else{
+			 		textAminate();
+			 	}
 
 			 		setTimeout(function(){
 			 			slider.find('.text').fadeIn('slow');
 			 		} , 500)
-			     	// console.log(slider)
-			     }
+			}
 		});
 	}
 
+	/*
+	* 切换字体
+	*/
 	function switchText(){
-		// console.log(this)
-
 		if (this.hasClass('action')) {
 			return 
 		}else{
@@ -44,16 +61,29 @@ var jobs = (function(){
 		}
 	}
 
+	/*
+	* 文字动画
+	*/
+	function textAminate(){
+		var oddObj = $('.whoWeAre p.odd'),
+			evenObj = $('.whoWeAre p.even') ;
+
+		oddObj.addClass('animFirst');
+		evenObj.addClass('animSecond');
+	}
+
 	return {
 		version : '1.0' , 
 		init : initSlider ,
 		switchText : switchText ,
-		screenResize : screenResize 
+		screenResize : screenResize ,
+		textAminate : textAminate
 	} ;
 
 })();
 
 $(function(){
+	jobs.textAminate();
 	jobs.init();
 	jobs.screenResize();
 

@@ -9,8 +9,9 @@ body{width:100%}
 .swiper-slide{height: 100%;width:100%;background-color: #ecf0f0;position: relative;overflow: hidden}
 .swiper-slide .content{position: relative;height:100%;width:100%;}
 .swiper-slide .pic{position: absolute;bottom:-3px;left: 0}
-.text{position: absolute;z-index: 1;background-color: rgba(0 , 0 , 0 , 0.5);height:80px;width: 100%;bottom:50px;display: none}
+.text{position: absolute;z-index: 1;height:80px;width: 100%;bottom:50px;display: none}
 .text img{width: 80%;margin: 0.5em auto;display: block;}
+.textContent{background-color: rgba(0 , 0 , 0 , 0.5);height:100%;padding-top:0.2em }
 .first{z-index: 9}
 .first , .third{background-color:#cc1f01;}
 .first .text{width: 80%;margin: 2em auto;position: relative;background-color: transparent;display: block;bottom: 0}
@@ -29,3 +30,21 @@ body{width:100%}
 .third .icons .theFirst{margin-right: 45px;margin-left:-93px}
 .third .icons .theLast{margin-left:23px }
 .third .icons li.action{background-color: #fff}
+.whoWeAre{margin-top: 1em}
+.whoWeAre p{font-size: 1.6em;text-align: center;color: #fff;margin-bottom: 1em;width: 100%}
+/*.whoWeAre p.odd{margin-left: -100%}
+.whoWeAre p.even{margin-left: 100%}*/
+.animFirst{
+	-webkit-animation: animL 1s ease-in-out;
+}
+.animSecond{
+	-webkit-animation: animR 1s ease-in-out;
+}
+@-webkit-keyframes animL{ 
+	from {margin-left: -100%}
+	to {margin-left: 0}
+}
+@-webkit-keyframes animR{ 
+	from {margin-left: 100%}
+	to {margin-left: 0}
+}

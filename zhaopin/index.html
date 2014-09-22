@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>叫小鱼招聘</title>
+        <title>你会不会死</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="css/idangerous.swiper.css">
         <link rel="stylesheet" type="css/style.css" href="css/style.css?v=1">
         <script type="text/javascript" src="script/zepto.min.js"></script><!-- 页面切换 -->
         <script type="text/javascript" src="script/idangerous.swiper-2.1.min.js"></script>
-        <script type="text/javascript" src="script/jobs.js?v=1"></script>
+        <script type="text/javascript" src="script/jobs.js?v=2"></script>
     </head>
     <body>
         <div id="wrapper">
@@ -27,7 +27,7 @@
                                 <p class="even">是70s，80s，90s一起愉快玩耍的创业团队</p>
                                 <p class="odd">扎根广州创业</p>
                                 <p class="even">我们正在琢磨一个能赶走无聊</p>
-                                <p class="odd">让你各种技能get的社交APP</p>
+                                <p class="odd">让你各种技能get✔️的社交APP</p>
                            </div>
                         </div>
                     </div>
@@ -99,13 +99,13 @@
                             </div>
 
                             <div class="operation come">
-                                <p>如果你 热爱互联网，喜欢码字，各种小爱好。卖得了萌，耍得了二，扮得了文青，演得了女王......请你砸简历给我们吧！</p>
-                                <p>如果你 待过了4A，写得了方案，做得了活动，对得起客户......请你砸简历给我们吧！</p>
+                                <p>如果你热爱互联网，喜欢码字，各种小爱好。卖得了萌，耍得了二，扮得了文青，演得了女王......请你砸简历给我们吧！</p>
+                                <p>如果你待过了4A，写得了方案，做得了活动，对得起客户......请你砸简历给我们吧！</p>
                                 <p>实习生老师，如果你在学校热衷于活动策划外联文宣......请你砸简历给我们吧！</p>
                             </div>
 
                             <div class="marketing come">
-                                <p>懂这个词得小伙伴，我们就应该不需要描述职位需求了。请你砸简历给我们吧！<p/>
+                                <p>懂这个词的小伙伴，我们就应该不需要描述职位需求了。请你砸简历给我们吧！<p/>
                                 <p>    
                                 我们不在乎你之前干过什么<br/>
                                 只要你和我们一样<br/>
@@ -117,7 +117,19 @@
                 </div>
             </div>
         </div>
-
         <div class="arrow"><img src="img/arrow.png" /></div>
     </body>
+
+<!-- <script type="text/javascript" src="script/webchat.js"></script> -->
+<script src="script/weixin-api.js"></script>
+<script>
+var wxData = {
+  'appId': '', // 服务号可以填写appId，没有则留空
+  'imgUrl': '', // 分享显示的图标
+  'link': 'http://mikejay.github.io/zhaopin/img/4.jpg', // 分享链接
+  'title': "你会不会死", // 分享标题
+  'desc': '' // 分享内容
+};
+WeixinAPI.ready(wxData);
+</script>
 </html>

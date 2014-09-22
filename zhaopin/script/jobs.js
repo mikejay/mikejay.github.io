@@ -98,6 +98,9 @@ var jobs = (function(){
 
 $(function(){
 	//jobs.textAminate();
+
+	// var _
+
 	jobs.init();
 	jobs.screenResize();
 
@@ -110,4 +113,7 @@ $(function(){
 		 	jobs.switchText.call(obj);
 	});
 
+	//head.js('script/wechat.js' , function(){
+		
+	//});
 });

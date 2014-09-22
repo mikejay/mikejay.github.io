@@ -34,7 +34,7 @@ body{width:100%}
 .third .icons li.action a{color:#46caed;}
 .third .about{margin-top: 160px}
 .whoWeAre{margin-top: 1em;display: none}
-.whoWeAre p{font-size: 1.6em;text-align: center;color: #fff;margin-bottom: 1em;width: 100%}
+.whoWeAre p{font-size: 1.6em;text-align: center;color: #fff;margin-bottom: 0.5em;width: 100%}
 /*.whoWeAre p.odd{margin-left: -100%}
 .whoWeAre p.even{margin-left: 100%}*/
 .index , .first , .third{background-image:url(../img/bg.jpg);background-repeat:no-repeat;background-size: 100% auto;background-color: #4296d5}

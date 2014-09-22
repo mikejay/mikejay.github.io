@@ -21,10 +21,10 @@ body{width:100%}
 .come{display: none}
 .third h3{font-size: 1.8em}
 .third p  , .third a{font-size: 1.4em}
-.third p{margin-bottom: 1em}
+.third p{margin-bottom: 0.8em;line-height: 1.4}
 .third .come{width: 86%;margin: 0 auto;line-height: 1.8;}
 .third .operation{display: block;}
-.third .icons{position: relative;height:70px;margin-bottom: 24px}
+.third .icons{position: relative;height:70px;margin-bottom: 18px}
 .third .icons li{width: 70px;height: 70px;border-radius:70px;line-height:70px;font-size:1.8em;overflow:hidden;background-color: rgba(255 , 255, 255 , .2);color:#c52100;float: left;position: absolute;left:50%;}
 /*.third .icons li a{color:#c52100;}*/
 .third .icons .theFirst{margin-right: 45px;margin-left:-93px}
@@ -34,7 +34,7 @@ body{width:100%}
 .third .icons li.action a{color:#46caed;}
 .third .about{margin-top: 160px}
 .whoWeAre{margin-top: 1em;display: none}
-.whoWeAre p{font-size: 1.6em;text-align: center;color: #fff;margin-bottom: 0.5em;width: 100%}
+.whoWeAre p{font-size: 1.6em;text-align: center;color: #fff;margin-bottom: 1em;width: 100%}
 /*.whoWeAre p.odd{margin-left: -100%}
 .whoWeAre p.even{margin-left: 100%}*/
 .index , .first , .third{background-image:url(../img/bg.jpg);background-repeat:no-repeat;background-size: 100% auto;background-color: #4296d5}

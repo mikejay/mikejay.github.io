@@ -37,7 +37,7 @@ body{width:100%}
 .whoWeAre p{font-size: 1.6em;text-align: center;color: #fff;margin-bottom: 1em;width: 100%}
 /*.whoWeAre p.odd{margin-left: -100%}
 .whoWeAre p.even{margin-left: 100%}*/
-.index , .first , .third{background-image:url(../img/bg.jpg);background-repeat:no-repeat;background-size: 100% auto}
+.index , .first , .third{background-image:url(../img/bg.jpg);background-repeat:no-repeat;background-size: 100% auto;background-color: #4296d5}
 .third{background-image:url(../img/bg2.jpg);}
 .index .logo{width: 80px;margin: 70px auto 0}
 .index .die{width: 102px;margin: 25px auto 0}

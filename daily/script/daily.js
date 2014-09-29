@@ -13,7 +13,7 @@ head.js('script/lib/zepto.min.js' , 'script/lib/idangerous.swiper-2.1.min.js' , 
 		function init(){
 
 	  		var winH = $(window).height() ;
-	  		$('.swiper-container-article , .swiper-container-list').css('height' , winH);
+	  		$('.swiper-container-article , .swiper-container-list , .cover').css('height' , winH);
 
 	  		var holdPosition = 0;
 	  		var mySwiper = new Swiper('.swiper-container-article',{

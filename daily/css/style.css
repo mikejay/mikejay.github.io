@@ -1,0 +1,54 @@
+*{padding:0;margin:0;list-style:none}
+	html{font-size:62.5%;*overflow-x:hidden}
+	body{font-weight:500;font-family:"HelveticaNeueLTPro-Md", "Helvetica Neue", Helvetica, Arial, Sans-Serif;}
+	a{text-decoration:none;cursor:pointer}
+	a img{border:0}
+	img{width: 100%}
+	h1,h2,h3,h4,h5,h6{font-weight: 600;font-family:"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif}
+	abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video{display:block}
+	.clearfix:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
+	h1{color: #010101;padding: 23px 23px 14px;text-align: center;font-size: 2em;line-height: 1.3;border-top:5px solid #bf2127 }
+	.page{opacity: 0;height: 100%}
+
+
+	.coverImg img{margin-bottom: -3px}
+	.cover{position: relative;}
+	.cover .title{position: absolute;bottom:0px;left: 0;background:#fff;padding-bottom:64px }
+	.cover .title .time{position: absolute;right: 0;top:-25px;color: #fff;background:#bf2127;height: 25px;width: 60px;text-align: center;font-size: 1.4em;line-height: 25px;}
+	.cover .title .down{display: block;width: 12px;height:8px;margin:0 auto;}
+	.article{background-color:#fff;z-index: 2;border-bottom:10px solid #bf2127;height:100%;overflow: scroll;}
+	.article section{padding:0 15px;font-size: 1.6em}
+	.article .info{color:#5c5c5c;margin-bottom: 20px;margin-top: 10px;font-weight: 300}
+	.article p{margin-bottom: 18px;line-height: 1.6;text-align: justify;}
+	.article .bottom{text-align: center;margin-bottom: 40px}
+	.article .bottom p{font-size: 1.6em;text-align: center}
+	.article .copyright{font-size: 1.4em}
+	.article .bottom .zan{width: 60px;height: 25px;background:url(../img/zan.png) 0 0 no-repeat;background-size: 60px 60px;margin:0 auto;font-size: 1em;padding-top: 35px;color: #bf2127;margin-bottom: 10px}
+	.article .bottom .has{background-image: url(../img/zaned.png);color:#fff;}
+	.article a{color: #0488db}
+	.bottomBar{width: 100%;height:49px;background:#040000;position: absolute;bottom: 0;left: 0;z-index: 2}
+	.bottomBar li{width: 50%;float: left;height:49px;color:#fff;line-height: 49px;font-size: 1.4em;position: relative;}
+	.bottomBar li span{color: #b4b4b4}
+	.bottomBar li.action span{color:#fff;}
+	.bottomBar li.all{}
+	.bottomBar .center{width:35px;height:49px;background:url(../img/center_first.png) center center no-repeat;position: absolute;left: 50%;top: 0;margin-left: -17px}
+	.bottomBar li.today .todayIcon{display: block;width:12px;height:12px;background: url(../img/home_grey.png);background-size: 12px 12px;float: left;margin:17px 7px 0 0}
+	.bottomBar li.all .allIcon{display: block;width:14px;height:10px;background:url(../img/list_grey.png);background-size: 14px 10px;float: left;margin:18px 7px 0 0 ;}
+	.bottomBar li span{display: block;width: 50px;position: absolute;height:49px;top: 0}
+	.bottomBar li.today span{right:50px;}
+	.bottomBar li.all span{left:50px;}
+	.bottomBar li{background:#22292c;}
+	.bottomBar li.action{background: #040000;color:#fff;}
+	.bottomBar li.action .todayIcon{background-image:url(../img/home_white.png);}
+	.bottomBar li.action .allIcon{background-image:url(../img/list_white.png);}
+	.index{opacity: 1}
+	.alllist{height: 100%;}
+	.alllist li{padding:12px 8px 10px;border-bottom:1px solid #dcdcdc;position: relative;}
+.alllist li .titleImg , .alllist li .rightCon{float: left}
+.alllist li .titleImg{width:31%;height: 75px;overflow: hidden}
+.alllist li .rightCon{width:63%;margin-left:5%  }
+.alllist li h3{font-size: 1.5em;line-height: 1.4}
+.alllist li .date{float: left}
+.alllist li .zanCount{float: right;padding-left: 12px;background: url(../img/heart.png) 0 center no-repeat;background-size: 10px 10px}
+.alllist li .bottom{font-size: 1.2em;color:#5c5c5c;position: absolute;bottom:10px;right: 8px;width:63%;font-weight: 300}
+.place{height:50px;}

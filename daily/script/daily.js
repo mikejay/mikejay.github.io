@@ -13,7 +13,7 @@ head.js('script/lib/zepto.min.js' , 'script/lib/idangerous.swiper-2.1.min.js' , 
 		function init(){
 
 	  		var winH = $(window).height() ;
-	  		$('.swiper-container-article , .swiper-container-list , .cover').css('height' , winH);
+	  		$('.swiper-container-article , .swiper-container-list').css('height' , winH);
 
 	  		var holdPosition = 0;
 	  		var mySwiper = new Swiper('.swiper-container-article',{
@@ -43,10 +43,23 @@ head.js('script/lib/zepto.min.js' , 'script/lib/idangerous.swiper-2.1.min.js' , 
 	  				scrollContainer: true,
 			    	mode : 'vertical',
 	  			}) ;
-	  	
+	  		
+	  		//设置封面title位置
+	  		initTitlePos();
+
 	  		//判断是否有赞过
 			checkZan();
 	  	}
+
+	  	/*
+	  	* 初始化标题位置
+	  	*/
+	  	function initTitlePos(){
+	  		var title = $('.cover .title') ,
+	  			t = $(window).height() - title.height() ;
+	  			title.css('top' , t);
+	  	}
+
 	  	/*
 		* 页面切换
 		*/
@@ -105,7 +118,8 @@ head.js('script/lib/zepto.min.js' , 'script/lib/idangerous.swiper-2.1.min.js' , 
 			init : init ,
 			switchPage : switchPage ,
 			zan : zan , 
-			checkZan : checkZan 
+			checkZan : checkZan ,
+			initTitlePos : initTitlePos
 		} ; 
 
   	})();
@@ -113,6 +127,10 @@ head.js('script/lib/zepto.min.js' , 'script/lib/idangerous.swiper-2.1.min.js' , 
 
   	$(function(){
   		today.init();
+
+  		$(window).resize(function(){
+  			today.initTitlePos();
+  		});
 
   		$('.bottomBar li').bind('tap' , function(){
 			var obj = $(this);

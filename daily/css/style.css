@@ -9,9 +9,8 @@
 	.clearfix:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
 	h1{color: #010101;padding: 23px 23px 14px;text-align: center;font-size: 2em;line-height: 1.3;border-top:5px solid #bf2127 }
 	.page{opacity: 0;height: 100%}
-	
+
 	.coverImg img{margin-bottom: -3px}
-	.cover{position: relative;}
 	.cover .title{position: absolute;bottom:0px;left: 0;background:#fff;padding-bottom:64px }
 	.cover .title .time{position: absolute;right: 0;top:-25px;color: #fff;background:#bf2127;height: 25px;width: 60px;text-align: center;font-size: 1.4em;line-height: 25px;}
 	.cover .title .down{display: block;width: 12px;height:8px;margin:0 auto;}

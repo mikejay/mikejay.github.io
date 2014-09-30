@@ -92,6 +92,8 @@ head.js('script/lib/zepto.min.js' , 'script/lib/idangerous.swiper-2.1.min.js' , 
 			$('#wrapper').bind('touchmove' , function(e){
 				e.preventDefault();
 			});
+
+
 	  	}
 
 	  	/*
@@ -119,9 +121,9 @@ head.js('script/lib/zepto.min.js' , 'script/lib/idangerous.swiper-2.1.min.js' , 
 					obj.addClass('action');
 
 					if(index == 0) {
-						$('.bottomBar .center').css({'background-image' : 'url(img/center_first.png)'});
+						$('.bottomBar .center').css({'background-position' : '0 -50px'});
 					}else{
-						$('.bottomBar .center').css({'background-image' : 'url(img/center_second.png)'});
+						$('.bottomBar .center').css({'background-position' : '0 0'});
 						
 					}
 

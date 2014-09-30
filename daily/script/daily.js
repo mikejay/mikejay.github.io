@@ -15,7 +15,7 @@ head.js('script/lib/zepto.min.js' , 'script/lib/idangerous.swiper-2.1.min.js' , 
 	  		var winH = $(window).height() ;
 	  		$('.swiper-container-article , .swiper-container-list').css('height' , winH);
 
-	  		var holdPosition = 0 ;
+	  		var holdPosition = 0 , bar = $('.bottomBar') , isBottom ; 
 	  		var mySwiper = new Swiper('.swiper-container-article',{
 			    scrollContainer: true,
 			    mode : 'vertical',
@@ -24,13 +24,16 @@ head.js('script/lib/zepto.min.js' , 'script/lib/idangerous.swiper-2.1.min.js' , 
 			    	holdPosition = 0 ;	
 			    },
 			    onResistanceBefore: function(s, pos){
-			    	holdPosition = pos;
+			    	holdPosition = pos ;
 			    },
+			    onResistanceAfter : function(s , pos){
+			    	// if (bar.css('display') == 'none') {
+			    	// 	bar.fadeIn();
+			    	// };
+			    } ,
 			    onTouchEnd: function(s){
-			    	var t = s.touches ,
-			    		bar = $('.bottomBar') ;
-			    		// console.log(t.diff)
-
+			    	var t = s.touches ;
+			    	
 			    		if (t.diff > 10) {//向上滚动
 			    			if (bar.css('display') == 'none') {
 			    				bar.fadeIn();

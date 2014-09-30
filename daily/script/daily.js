@@ -87,6 +87,11 @@ head.js('script/lib/zepto.min.js' , 'script/lib/idangerous.swiper-2.1.min.js' , 
 
 	  		//判断是否有赞过
 			checkZan();
+
+			//禁止用scroll
+			$('#wrapper').bind('touchmove' , function(e){
+				e.preventDefault();
+			});
 	  	}
 
 	  	/*
@@ -202,6 +207,7 @@ head.js('script/lib/zepto.min.js' , 'script/lib/idangerous.swiper-2.1.min.js' , 
   	});
 });
 
+//分享文案
 (function(){
 	var title = document.getElementsByTagName('h1')[0].innerHTML.trim() ,
 		cover = document.getElementById('coverImg').src ;

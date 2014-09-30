@@ -33,7 +33,7 @@ head.js('script/lib/zepto.min.js' , 'script/lib/idangerous.swiper-2.1.min.js' , 
 			    } ,
 			    onTouchEnd: function(s){
 			    	var t = s.touches ;
-			    	
+
 			    		if (t.diff > 10) {//向上滚动
 			    			if (bar.css('display') == 'none') {
 			    				bar.fadeIn();
@@ -72,6 +72,16 @@ head.js('script/lib/zepto.min.js' , 'script/lib/idangerous.swiper-2.1.min.js' , 
 	  		var listSwiper = new Swiper('.swiper-container-list' , {
 	  				scrollContainer: true,
 			    	mode : 'vertical',
+			    	onTouchMove : function(s , pos){
+			    		if (bar.css('display') != 'none') {
+			    			bar.hide();
+			    		};
+			    	} , 
+			    	onTouchEnd : function(){
+			    		if (bar.css('display') == 'none') {
+			    			bar.fadeIn();
+			    		};
+			    	}
 	  			}) ;
 	  		
 	  		//设置封面title位置

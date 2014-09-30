@@ -15,21 +15,37 @@ head.js('script/lib/zepto.min.js' , 'script/lib/idangerous.swiper-2.1.min.js' , 
 	  		var winH = $(window).height() ;
 	  		$('.swiper-container-article , .swiper-container-list').css('height' , winH);
 
-	  		var holdPosition = 0;
+	  		var holdPosition = 0 ;
 	  		var mySwiper = new Swiper('.swiper-container-article',{
 			    scrollContainer: true,
 			    mode : 'vertical',
 			    watchActiveIndex: true,
-			    onTouchStart: function() {
-			      holdPosition = 0;
+			    onTouchStart: function(s) {
+			    	holdPosition = 0 ;	
 			    },
 			    onResistanceBefore: function(s, pos){
-			      holdPosition = pos;
+			    	holdPosition = pos;
 			    },
-			    onTouchEnd: function(){
-			      if (holdPosition>100) {
-			      	rootSwiper.swipeTo(0, 500, {});
-			      }
+			    onTouchEnd: function(s){
+			    	var t = s.touches ,
+			    		bar = $('.bottomBar') ;
+			    		// console.log(t.diff)
+
+			    		if (t.diff > 10) {//向上滚动
+			    			if (bar.css('display') == 'none') {
+			    				bar.fadeIn();
+			    			}
+			    		};
+
+			    		if (t.diff < -10) {
+			    			if (bar.css('display') != 'none') {
+			    				bar.hide();
+			    			};
+			    		};
+
+				    	if (holdPosition > 100) {
+				      		rootSwiper.swipeTo(0, 500, {});
+				      	}
 			    }
 
 			  });
@@ -37,6 +53,17 @@ head.js('script/lib/zepto.min.js' , 'script/lib/idangerous.swiper-2.1.min.js' , 
 	  		var rootSwiper = new Swiper('.swiper-container',{
 			    // scrollContainer: true,
 			    mode : 'vertical',
+			    onSlideChangeStart : function(s){
+			    	if (s.activeIndex == 1) {
+			    		$('.bottomBar').hide();
+			    	}else{
+			    		$('.bottomBar').fadeIn();
+			    	}
+
+			    	//console.log(s.activeIndex)
+
+			    	//slide.isActive()
+			    }
 			  });
 
 	  		var listSwiper = new Swiper('.swiper-container-list' , {

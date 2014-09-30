@@ -15,6 +15,8 @@ head.js('script/lib/zepto.min.js' , 'script/lib/idangerous.swiper-2.1.min.js' , 
 	  		var winH = $(window).height() ;
 	  		$('.swiper-container-article , .swiper-container-list').css('height' , winH);
 
+	  		// $('.swiper-container-article , .swiper-container-list')
+
 	  		var holdPosition = 0 , bar = $('.bottomBar') , isBottom ; 
 	  		var mySwiper = new Swiper('.swiper-container-article',{
 			    scrollContainer: true,
@@ -62,10 +64,6 @@ head.js('script/lib/zepto.min.js' , 'script/lib/idangerous.swiper-2.1.min.js' , 
 			    	}else{
 			    		$('.bottomBar').fadeIn();
 			    	}
-
-			    	//console.log(s.activeIndex)
-
-			    	//slide.isActive()
 			    }
 			  });
 
@@ -145,12 +143,16 @@ head.js('script/lib/zepto.min.js' , 'script/lib/idangerous.swiper-2.1.min.js' , 
 		*/
 		function checkZan(){
 			var c = $.cookie.get('infzm_zan') ;
-
-			console.log(c)
-
 			if (typeof c != 'undefined' && c != '' && c == 1) {
 				$('.bottom .zan').addClass('has');
 			};
+		}
+
+		/*
+		* 打开另外的文章
+		*/
+		function openNext(){
+			console.log(this);
 		}
 
 		return {
@@ -190,6 +192,15 @@ head.js('script/lib/zepto.min.js' , 'script/lib/idangerous.swiper-2.1.min.js' , 
 				today.zan();
 			};
 		}) ;
+
+		//列表点击进入文章
+		$('.alllist li').bind('touchstart' , function(){
+			$(this).addClass('bg');
+		}).bind('touchend' ,function(){
+			$(this).removeClass('bg')
+		})
+
+
 
   	})
 

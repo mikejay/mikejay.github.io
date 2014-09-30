@@ -18,7 +18,7 @@
 	.article{background-color:#fff;z-index: 2;border-bottom:10px solid #bf2127;height:100%;overflow: scroll;}
 	.article section{padding:0 15px;font-size: 1.6em}
 	.article .info{color:#5c5c5c;margin-bottom: 16px;margin-top: 10px;font-weight: 300;font-size: .875em}
-	.article p{margin-bottom: 14px;line-height: 1.5;text-align: justify;font-weight: 300}
+	.article p{margin-bottom: 14px;line-height: 1.5;text-align: justify;font-weight: 300;color:#333;}
 	.article .bottom{text-align: center;margin-bottom: 40px}
 	.article .bottom p{font-size: 1.6em;text-align: center}
 	.article .copyright{font-size: 1.4em}
@@ -44,10 +44,11 @@
 	.alllist{height: 100%;}
 	.alllist li{padding:12px 8px 10px;border-bottom:1px solid #dcdcdc;position: relative;}
 .alllist li .titleImg , .alllist li .rightCon{float: left}
-.alllist li .titleImg{width:31%;height: 75px;overflow: hidden}
+.alllist li .titleImg{width:31%;height: 75px;overflow: hidden;}
 .alllist li .rightCon{width:63%;margin-left:5%  }
 .alllist li h3{font-size: 1.5em;line-height: 1.4}
-.alllist li .date{float: left}
-.alllist li .zanCount{float: right;padding-left: 12px;background: url(../img/heart.png) 0 center no-repeat;background-size: 10px 10px}
+.alllist li .date{float: left;margin-left: 4%}
+.alllist li .zanCount{float: right;padding-left: 12px;background: url(../img/heart.png) 0 center no-repeat;background-size: 10px 10px;margin-right: 4%}
 .alllist li .bottom{font-size: 1.2em;color:#5c5c5c;position: absolute;bottom:10px;right: 8px;width:63%;font-weight: 300}
 .place{height:50px;}
+.bg{background:#EEE;}

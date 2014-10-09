@@ -45,8 +45,6 @@
 	.bottomBar li.action{background: #040000;color:#fff;}
 	.bottomBar li.action .todayIcon{background-position:12px -12px; }
 	.bottomBar li.action .allIcon{background-position:14px -43px;}
-
-
 .index{opacity: 1}
 .alllist{height: 100%;}
 .alllist li{padding:12px 8px 10px;border-bottom:1px solid #dcdcdc;position: relative;}

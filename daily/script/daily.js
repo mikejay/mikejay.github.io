@@ -213,7 +213,7 @@ head.js('script/lib/zepto.min.js' , 'script/lib/idangerous.swiper-2.1.min.js' , 
 (function(){
 	var title = document.getElementsByTagName('h1')[0].innerHTML.trim() ,
 		cover = document.getElementById('coverImg').src ,
-		shareImg = 'http://mikejay.github.io/images/nfzm/7.pic.jpg' ;
+		shareImg = 'http://mikejay.github.io/images/nfzm/cover2.jpg' ;
 
 	var wxData = {
 	  'appId': '', // 服务号可以填写appId，没有则留空

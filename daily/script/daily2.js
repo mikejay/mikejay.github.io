@@ -213,13 +213,13 @@ head.js('script/lib/zepto.min.js' , 'script/lib/idangerous.swiper-2.1.min.js' , 
 (function(){
 	var title = document.getElementsByTagName('h1')[0].innerHTML.trim() ,
 		cover = document.getElementById('coverImg').src ,
-		shareImg = 'http://mikejay.github.io/images/nfzm/9.pic.jpg' ;
+		shareImg = 'http://mikejay.github.io/images/nfzm/cover1.jpg' ;
 
 	var wxData = {
 	  'appId': '', // 服务号可以填写appId，没有则留空
 	  'imgUrl': shareImg , // 分享显示的图标
 	  'link': document.location.href, // 分享链接
-	  'title': '南方周末 － 今日专稿', // 分享标题
+	  'title': '南方周末今日网络专稿', // 分享标题
 	  'desc': title // 分享内容
 	};
 	
